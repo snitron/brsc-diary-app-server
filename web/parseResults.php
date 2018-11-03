@@ -79,7 +79,7 @@ if(count($tables) == 2){
     $length = count($results);
     for($i = $length + 1; $i < count($trS) + $length + 1; $i++) {
         $tr = HtmlDomParser::str_get_html($trS[$i - $length]);
-        echo $tr;
+        echo "<plaintext>". $tr . "</plaintext>";
         $tdS = $tr->find("td");
         $result = new Result();
         for($j = 0; $j < count($tdS); $j++){
