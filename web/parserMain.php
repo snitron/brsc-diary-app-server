@@ -1,4 +1,9 @@
 <?php
+
+require __DIR__ . "/../vendor/autoload.php";
+use Snoopy\Snoopy;
+use Sunra\PhpSimple\HtmlDomParser;
+
     class DaySheldule{
         public $count = 0;
         public $lessons = array();
@@ -8,14 +13,10 @@
         public $dayName = "";
     }
 
-        require __DIR__ . "/../vendor/autoload.php";
-
        $action = filter_input(INPUT_GET, "action", FILTER_SANITIZE_STRING);
 
         $login = filter_input(INPUT_GET, 'login', FILTER_SANITIZE_STRING);
         $password = filter_input(INPUT_GET, 'password', FILTER_SANITIZE_STRING);
-
-        use Snoopy\Snoopy;
 
         $snoopy = new Snoopy();
 
@@ -31,11 +32,7 @@
         $week = filter_input(INPUT_GET, "week", FILTER_SANITIZE_STRING);
         $snoopy->submit("https://edu.brsc.ru/User/Diary?UserId=". $userID. "&Week=". $week . "&dep=0");
 
-
-        use Sunra\PhpSimple\HtmlDomParser;
-
         $html = HtmlDomParser::str_get_html($snoopy->results);
-
 
         $elements = $html->find("table[class=\"table table-border\"]");
         $days = array();
@@ -45,7 +42,7 @@
         for ($i = 0; $i < count($elements); $i++) {
             $day = new DaySheldule();
 
-            $trS = str_get_html($elements[$i])->find("tr[class=tableborder]");
+            $trS = HtmlDomParser::str_get_html($elements[$i])->find("tr[class=tableborder]");
 
             $day->isWeekend = false;
             $day->count = count($trS);
@@ -53,7 +50,7 @@
             for ($j = 0; $j < count($trS); $j++) {
                 $wasEmpty = false;
 
-                $day->lessons[$j] = count(str_get_html($trS[$j])->find("div[title]")) != 0 ? strip_tags(str_get_html($trS[$j])->find("div[title]")[0]) : $wasEmpty = true;
+                $day->lessons[$j] = count(HtmlDomParser::str_get_html($trS[$j])->find("div[title]")) != 0 ? strip_tags(HtmlDomParser::str_get_html($trS[$j])->find("div[title]")[0]) : $wasEmpty = true;
 
                 if ($wasEmpty) {
                     $day->isWeekend = true;
@@ -61,14 +58,14 @@
                     break;
                 }
 
-                $marks = str_get_html($trS[$j])->find("td[data-mark-ids]");
+                $marks = HtmlDomParser::str_get_html($trS[$j])->find("td[data-mark-ids]");
 
                 if (count($marks) != 0)
                     $day->marks[$j] = strip_tags($marks[0]);
                 else
                     $day->marks[$j] = "";
 
-                $tmp_hw = str_get_html($trS[$j])->find('td[data-lessonid]')[0];
+                $tmp_hw = HtmlDomParser::str_get_html($trS[$j])->find('td[data-lessonid]')[0];
 
                 if (strlen($tmp_hw) != 0)
                     $day->homeworks[$j] = strip_tags($tmp_hw);
