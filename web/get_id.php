@@ -3,8 +3,8 @@ require __DIR__ . "/../vendor/autoload.php";
 use Snoopy\Snoopy;
 use Sunra\PhpSimple\HtmlDomParser;
 
-    $login = filter_input(INPUT_GET, "login", FILTER_SANITIZE_STRING);
-    $password = filter_input(INPUT_GET, "password", FILTER_SANITIZE_STRING);
+    $login = filter_input(INPUT_POST, "login", FILTER_SANITIZE_STRING);
+    $password = filter_input(INPUT_POST, "password", FILTER_SANITIZE_STRING);
 
     $snoopy = new Snoopy();
 

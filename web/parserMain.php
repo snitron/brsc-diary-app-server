@@ -13,10 +13,10 @@ use Sunra\PhpSimple\HtmlDomParser;
         public $dayName = "";
     }
 
-       $action = filter_input(INPUT_GET, "action", FILTER_SANITIZE_STRING);
+       $action = filter_input(INPUT_POST, "action", FILTER_SANITIZE_STRING);
 
-        $login = filter_input(INPUT_GET, 'login', FILTER_SANITIZE_STRING);
-        $password = filter_input(INPUT_GET, 'password', FILTER_SANITIZE_STRING);
+        $login = filter_input(INPUT_POST, 'login', FILTER_SANITIZE_STRING);
+        $password = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_STRING);
 
         $snoopy = new Snoopy();
 
@@ -28,8 +28,8 @@ use Sunra\PhpSimple\HtmlDomParser;
         $snoopy->submit("https://edu.brsc.ru/Logon/Index", $post_array);
         $snoopy->results;
 
-        $userID = filter_input(INPUT_GET, "userID", FILTER_SANITIZE_STRING);
-        $week = filter_input(INPUT_GET, "week", FILTER_SANITIZE_STRING);
+        $userID = filter_input(INPUT_POST, "userID", FILTER_SANITIZE_STRING);
+        $week = filter_input(INPUT_POST, "week", FILTER_SANITIZE_STRING);
         $snoopy->submit("https://edu.brsc.ru/User/Diary?UserId=". $userID. "&Week=". $week . "&dep=0");
 
         $html = HtmlDomParser::str_get_html($snoopy->results);
