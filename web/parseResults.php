@@ -33,15 +33,16 @@ $snoopy->results;
 $snoopy->submit("https://edu.brsc.ru/user/diary/diaryresult?UserId=" . $userID);
 $html = HtmlDomParser::str_get_html($snoopy->results);
 
-$tables = $html->find("table [class=\"table table-hover\"]");
+$trS = $html->find("tr");
 $wasSep = false;
 $results = array();
-/*
+
 for ($i = 2; $i < count($trS); $i++) {
     $tdS = HtmlDomParser::str_get_html($trS[$i])->find("td");
     $result = new Result();
 
     if($wasSep){
+        echo "WAS";
         for($j = 0; $j < count($tdS); $j++) {
             switch ($j) {
                 case 1:
@@ -62,8 +63,7 @@ for ($i = 2; $i < count($trS); $i++) {
                 default:
                     break;
             }
-        echo strip_tags($tdS[$j]) . " ";
-        $result->isHalfYear = true;
+            $result->isHalfYear = true;
         }
         $results[$i - 1] = $result;
         break;
@@ -97,7 +97,7 @@ for ($i = 2; $i < count($trS); $i++) {
                 default:
                     break;
             }
-            echo strip_tags($tdS[$j]) . " ";
+            echo strip_tags($tdS[0]) . "<br>";
         }
     }else
         $wasSep = true;
@@ -105,8 +105,8 @@ for ($i = 2; $i < count($trS); $i++) {
 
 
     $results[$i] = $result;
-}*/
-
+}
+/*
 for ($i = 0; $i < count($tables); $i++) {
     $trS = HtmlDomParser::str_get_html($tables[$i]->last_child())->find("tr");
     for ($j = 0; $j < count($trS); $i++) {
@@ -153,6 +153,6 @@ for ($i = 0; $i < count($tables); $i++) {
         $results[$j] = $result;
     }
 }
-
+*/
 echo json_encode($results);
 
