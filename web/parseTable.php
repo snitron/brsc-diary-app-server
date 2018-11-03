@@ -33,7 +33,8 @@ $snoopy->results;
 $snoopy->submit("https://edu.brsc.ru/user/diary/diarygradeslist?UserId=" . $userID);
 $html = HtmlDomParser::str_get_html($snoopy->results);
 $tbody = $html->find("tbody");
-echo $tbody[0];
+foreach ($tbody as $t)
+    echo $t . "<br>"
 
 /*
 $trS = HtmlDomParser::str_get_html($tbody[0])->find("tr");
