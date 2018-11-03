@@ -234,3 +234,5 @@ for ($i = 0; $i < count($tables); $i++) {
 */
 echo json_encode($results);
 
+echo count($tables);
+
