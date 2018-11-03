@@ -69,7 +69,7 @@ for ($i = 2; $i < count($trS); $i++) {
 
 
     if (strip_tags($tdS[0]) != "НАИМЕНОВАНИЕ ПРЕДМЕТА" && !$wasSep) {
-        for ($j = 0; $j < count($tdS); $j++)
+        for ($j = 0; $j < count($tdS); $j++){
             switch ($j) {
                 case 1:
                     $result->lesson = strip_tags($tdS[$j]);
@@ -94,7 +94,8 @@ for ($i = 2; $i < count($trS); $i++) {
                     break;
                 default:
                     break;
-
+            }
+            echo strip_tags($tdS[$j]) . " ";
         }
     }else
         $wasSep = true;
