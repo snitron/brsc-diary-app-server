@@ -33,7 +33,7 @@ $snoopy->results;
 $snoopy->submit("https://edu.brsc.ru/user/diary/diarygradeslist?UserId=" . $userID);
 $html = HtmlDomParser::str_get_html($snoopy->results);
 
-$trS = $html->find("tr");
+$trS = HtmlDomParser::str_get_html($html->find("tbody"))->find("tr");
 $tables = array();
 for($i = 0; $i < count($trS); $i++){
     $table = new Table();
