@@ -33,12 +33,87 @@ $snoopy->results;
 $snoopy->submit("https://edu.brsc.ru/user/diary/diaryresult?UserId=" . $userID);
 $html = HtmlDomParser::str_get_html($snoopy->results);
 
-$trS = $html->find("tr");
-$wasSep = false;
+$tables = $html->find("table[class=\"table table-hover\"]");
 $results = array();
-echo count($trS);
 
 
+    $trS = HtmlDomParser::str_get_html($tables[0])->find("tr");
+    for($i = 2; $i < count($trS); $i++){
+        $tdS = HtmlDomParser::str_get_html($trS[$i])->find("td");
+        $result = new Result();
+
+        for($j = 0; $j < count($tdS); $j++){
+            switch ($j) {
+                case 1:
+                    $result->lesson = strip_tags($tdS[$j]);
+                    break;
+                case 2:
+                    $result->m1 = strip_tags($tdS[$j]);
+                    break;
+                case 3:
+                    $result->m2 = strip_tags($tdS[$j]);
+                    break;
+                case 4:
+                    $result->m3 = strip_tags($tdS[$j]);
+                    break;
+                case 5:
+                    $result->m4 = strip_tags($tdS[$j]);
+                    break;
+                case 6:
+                    $result->y = strip_tags($tdS[$j]);
+                    break;
+                case 7:
+                    $result->res = strip_tags($tdS[$j]);
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        $results[$i - 2] = $result;
+    }
+
+
+if(count($tables) == 2){
+    $trS = HtmlDomParser::str_get_html($tables[1])->find("tr");
+    $length = count($results);
+    for($i = $length + 1; $i < count($trS) + 1; $i++) {
+        $tdS = HtmlDomParser::str_get_html($trS[$i - $length])->find("td");
+        $result = new Result();
+        for($j = 0; $j < count($tdS); $j++){
+            switch ($j) {
+                case 1:
+                    $result->lesson = strip_tags($tdS[$j]);
+                    break;
+                case 2:
+                    $result->m1 = strip_tags($tdS[$j]);
+                    break;
+                case 3:
+                    $result->m2 = strip_tags($tdS[$j]);
+                    break;
+                case 4:
+                    $result->y = strip_tags($tdS[$j]);
+                    break;
+                case 5:
+                    $result->res = strip_tags($tdS[$j]);
+                    break;
+                default:
+                    break;
+            }
+        }
+        $results[$i - 1] = $result;
+    }
+}
+
+
+
+
+
+
+
+
+
+/*
 for ($i = 2; $i < count($trS); $i++) {
     $tdS = HtmlDomParser::str_get_html($trS[$i])->find("td");
     $result = new Result();
@@ -108,7 +183,7 @@ for ($i = 2; $i < count($trS); $i++) {
 
     $results[$i] = $result;
 }
-/*
+
 for ($i = 0; $i < count($tables); $i++) {
     $trS = HtmlDomParser::str_get_html($tables[$i]->last_child())->find("tr");
     for ($j = 0; $j < count($trS); $i++) {
