@@ -62,6 +62,7 @@ for ($i = 2; $i < count($trS); $i++) {
                     break;
             }
         echo strip_tags($tdS[$j]) . " ";
+        $result->isHalfYear = true;
         }
         $results[$i - 1] = $result;
         break;
