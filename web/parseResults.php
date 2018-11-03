@@ -33,9 +33,74 @@ $snoopy->results;
 $snoopy->submit("https://edu.brsc.ru/user/diary/diaryresult?UserId=" . $userID);
 $html = HtmlDomParser::str_get_html($snoopy->results);
 
-$tables = $html->find("table[class=table table-hover]");
-
+$trS = $html->find("tr");
+$wasSep = false;
 $results = array();
+for ($i = 2; $i < count($trS); $i++) {
+    $tdS = HtmlDomParser::str_get_html($trS[$i])->find("td");
+    $result = new Result();
+
+    if($wasSep){
+        for($j = 0; $j < count($tdS); $j++)
+            switch ($j){
+                case 1:
+                    $result->lesson = strip_tags($tdS[$j]);
+                    break;
+                case 2:
+                    $result->m1 = strip_tags($tdS[$j]);
+                    break;
+                case 3:
+                    $result->m2 = strip_tags($tdS[$j]);
+                    break;
+                case 4:
+                    $result->y = strip_tags($tdS[$j]);
+                    break;
+                case 5:
+                    $result->res = strip_tags($tdS[$j]);
+                    break;
+            }
+
+        $results[$i - 1] = $result;
+        break;
+    }
+
+
+    if (strip_tags($tdS[0]) != "НАИМЕНОВАНИЕ ПРЕДМЕТА" && !$wasSep) {
+        for ($j = 0; $j < count($tdS); $j++)
+            switch ($j) {
+                case 1:
+                    $result->lesson = strip_tags($tdS[$j]);
+                    break;
+                case 2:
+                    $result->m1 = strip_tags($tdS[$j]);
+                    break;
+                case 3:
+                    $result->m2 = strip_tags($tdS[$j]);
+                    break;
+                case 4:
+                    $result->m3 = strip_tags($tdS[$j]);
+                    break;
+                case 5:
+                    $result->m4 = strip_tags($tdS[$j]);
+                    break;
+                case 6:
+                    $result->y = strip_tags($tdS[$j]);
+                    break;
+                case 7:
+                    $result->res = strip_tags($tdS[$j]);
+                    break;
+                default:
+                    break;
+
+        }
+    }else
+        $wasSep = true;
+
+
+
+    $results[$i] = $result;
+}
+/*
 for ($i = 0; $i < count($tables); $i++) {
     $trS = HtmlDomParser::str_get_html($tables[$i]->last_child())->find("tr");
     for ($j = 0; $j < count($trS); $i++) {
@@ -82,6 +147,6 @@ for ($i = 0; $i < count($tables); $i++) {
         $results[$j] = $result;
     }
 }
-
+*/
 echo json_encode($results);
 
