@@ -77,7 +77,7 @@ $results = array();
 if(count($tables) == 2){
     $trS = HtmlDomParser::str_get_html($tables[1])->find("tr");
     $length = count($results);
-    for($i = $length + 1; $i < count($trS) + 1; $i++) {
+    for($i = $length + 1; $i < count($trS) + $length + 1; $i++) {
         $tdS = HtmlDomParser::str_get_html($trS[$i - $length])->find("td");
         $result = new Result();
         for($j = 0; $j < count($tdS); $j++){
