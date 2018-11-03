@@ -36,7 +36,7 @@ $html = HtmlDomParser::str_get_html($snoopy->results);
 $trS = $html->find("tr");
 $wasSep = false;
 $results = array();
-echo "START";
+echo count($trS);
 
 
 for ($i = 2; $i < count($trS); $i++) {
