@@ -41,8 +41,8 @@ for ($i = 2; $i < count($trS); $i++) {
     $result = new Result();
 
     if($wasSep){
-        for($j = 0; $j < count($tdS); $j++)
-            switch ($j){
+        for($j = 0; $j < count($tdS); $j++) {
+            switch ($j) {
                 case 1:
                     $result->lesson = strip_tags($tdS[$j]);
                     break;
@@ -58,8 +58,11 @@ for ($i = 2; $i < count($trS); $i++) {
                 case 5:
                     $result->res = strip_tags($tdS[$j]);
                     break;
+                default:
+                    break;
             }
-
+        echo strip_tags($tdS[$j]) . " ";
+        }
         $results[$i - 1] = $result;
         break;
     }
