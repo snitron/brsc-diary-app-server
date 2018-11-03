@@ -101,6 +101,7 @@ if(count($tables) == 2){
                     break;
             }
         }
+        $result->isHalfYear = true;
         $results[$i - 1] = $result;
     }
 }
