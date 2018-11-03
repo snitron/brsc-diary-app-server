@@ -35,7 +35,7 @@ $html = HtmlDomParser::str_get_html($snoopy->results);
 $tbody = $html->find("tbody");
 echo $tbody[0];
 
-
+/*
 $trS = HtmlDomParser::str_get_html($tbody[0])->find("tr");
 $tables = array();
 for($i = 0; $i < count($trS); $i++){
@@ -79,4 +79,4 @@ for($i = 0; $i < count($trS); $i++){
 
 echo json_encode($tables);
 
-
+*/
