@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0753b39397f2b7f81d9b2cf4faae08d4",
+    "content-hash": "8bcc14ef0f7be2e42519cd72331451bf",
     "packages": [
         {
             "name": "pherum/snoopy",
@@ -90,7 +90,7 @@
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
-        "php": ">=5.4.0"
+        "php": ">=7.1.0"
     },
     "platform-dev": []
 }
