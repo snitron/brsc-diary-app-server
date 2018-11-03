@@ -33,9 +33,10 @@ $snoopy->results;
 $snoopy->submit("https://edu.brsc.ru/user/diary/diaryresult?UserId=" . $userID);
 $html = HtmlDomParser::str_get_html($snoopy->results);
 
-$trS = $html->find("tr");
+$tables = $html->find("table [class=\"table table-hover\"]");
 $wasSep = false;
 $results = array();
+/*
 for ($i = 2; $i < count($trS); $i++) {
     $tdS = HtmlDomParser::str_get_html($trS[$i])->find("td");
     $result = new Result();
@@ -104,8 +105,8 @@ for ($i = 2; $i < count($trS); $i++) {
 
 
     $results[$i] = $result;
-}
-/*
+}*/
+
 for ($i = 0; $i < count($tables); $i++) {
     $trS = HtmlDomParser::str_get_html($tables[$i]->last_child())->find("tr");
     for ($j = 0; $j < count($trS); $i++) {
@@ -152,6 +153,6 @@ for ($i = 0; $i < count($tables); $i++) {
         $results[$j] = $result;
     }
 }
-*/
+
 echo json_encode($results);
 
