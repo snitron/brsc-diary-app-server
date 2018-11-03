@@ -32,14 +32,10 @@ $snoopy->results;
 
 $snoopy->submit("https://edu.brsc.ru/user/diary/diarygradeslist?UserId=" . $userID);
 $html = HtmlDomParser::str_get_html($snoopy->results);
-$tbody = $html->find("tbody");
-foreach ($tbody as $t)
-    echo $t . "<br>"
 
-/*
-$trS = HtmlDomParser::str_get_html($tbody[0])->find("tr");
+$trS = $html->find("tr");
 $tables = array();
-for($i = 0; $i < count($trS); $i++){
+for($i = 2; $i < count($trS); $i++){
     $table = new Table();
     $tdS = HtmlDomParser::str_get_html($trS[$i])->find("td");
     for($j = 1; $j < 10; $j++){
@@ -75,9 +71,8 @@ for($i = 0; $i < count($trS); $i++){
                 break;
         }
     }
-    $tables[$i] = $table;
+    $tables[$i - 2] = $table;
 }
 
 echo json_encode($tables);
 
-*/
