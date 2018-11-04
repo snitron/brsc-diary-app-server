@@ -76,8 +76,8 @@ use DiDom\Document;
                 $a = $trS[$j]->find('td[data-lessonid]')[0]->find('a');
 
                 for($k = 1; $k < count($a); $k++)
-                    if($a[$j]->attr("href") != null)
-                        $day->hrefsHw[$j][$k] =  $a[$j]->attr("href");
+                    if($a[$k] != null)
+                        $day->hrefsHw[$j][$k] =  $a[$k]->attr("href");
                     else
                         $day->hrefsHw[$j][$k] = "";
 
