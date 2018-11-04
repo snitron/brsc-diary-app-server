@@ -19,4 +19,4 @@ $snoopy->results;
 $snoopy->submit("https://edu.brsc.ru/User/Diary");
 $html = new Document($snoopy->results);
 
-echo $html->find("h5.\"col-lg-12 col-md-12 col-sm-12 col-xs-12 b-user-block\"")[0]->text();
+echo $html->html();
