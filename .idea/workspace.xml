@@ -124,15 +124,15 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="json" value="4" />
-          <entry key="php" value="4612" />
-          <entry key="txt" value="223" />
+          <entry key="php" value="4647" />
+          <entry key="txt" value="255" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JSON" value="4" />
-          <entry key="PHP" value="4612" />
-          <entry key="PLAIN_TEXT" value="223" />
+          <entry key="PHP" value="4647" />
+          <entry key="PLAIN_TEXT" value="255" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.php.composer.actions">
@@ -149,7 +149,7 @@
           <entry key="json" value="2" />
           <entry key="lock" value="1" />
           <entry key="md" value="1" />
-          <entry key="php" value="5" />
+          <entry key="php" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
@@ -157,7 +157,7 @@
           <entry key="Ini" value="1" />
           <entry key="JSON" value="3" />
           <entry key="Markdown" value="1" />
-          <entry key="PHP" value="5" />
+          <entry key="PHP" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.php.composer.command.options">
@@ -182,8 +182,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/parseMain.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1139">
-              <caret line="80" column="67" selection-start-line="80" selection-start-column="67" selection-end-line="80" selection-end-column="67" />
+            <state relative-caret-position="595">
+              <caret line="36" column="103" lean-forward="true" selection-start-line="36" selection-start-column="103" selection-end-line="36" selection-end-column="103" />
             </state>
           </provider>
         </entry>
@@ -191,8 +191,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/get_id.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="21" column="62" selection-start-line="21" selection-start-column="62" selection-end-line="21" selection-end-column="62" />
+            <state relative-caret-position="85">
+              <caret line="5" column="8" selection-start-line="5" selection-end-line="20" />
               <folding>
                 <element signature="e#51#69#0#PHP" expanded="true" />
               </folding>
@@ -229,7 +229,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/parseResults.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1326">
@@ -237,6 +237,15 @@
               <folding>
                 <element signature="e#52#70#0#PHP" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web/getName.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="21" column="91" selection-start-line="21" selection-start-column="91" selection-end-line="21" selection-end-column="91" />
             </state>
           </provider>
         </entry>
@@ -278,6 +287,7 @@
         <option value="$PROJECT_DIR$/web/parseResults.php" />
         <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/web/parseMain.php" />
+        <option value="$PROJECT_DIR$/web/getName.php" />
       </list>
     </option>
   </component>
@@ -376,14 +386,7 @@
       <workItem from="1541247454187" duration="23000" />
       <workItem from="1541247498119" duration="526000" />
       <workItem from="1541249186420" duration="17543000" />
-      <workItem from="1541318810142" duration="15383000" />
-    </task>
-    <task id="LOCAL-00022" summary="test parse">
-      <created>1541272330873</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1541272330873</updated>
+      <workItem from="1541318810142" duration="15543000" />
     </task>
     <task id="LOCAL-00023" summary="test parse">
       <created>1541272530939</created>
@@ -721,14 +724,21 @@
       <option name="project" value="LOCAL" />
       <updated>1541333124885</updated>
     </task>
-    <option name="localTasksCounter" value="71" />
+    <task id="LOCAL-00071" summary="added getName functions">
+      <created>1541344314881</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1541344314881</updated>
+    </task>
+    <option name="localTasksCounter" value="72" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35772000" />
+    <option name="totallyTimeSpent" value="35932000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1401919" />
@@ -763,7 +773,8 @@
     <MESSAGE value="test parse" />
     <MESSAGE value="added new methods: parseResults and parseTable.&#10;now using DiDOM parsing library" />
     <MESSAGE value="parseMain: addaed teachers comments and files hrefs" />
-    <option name="LAST_COMMIT_MESSAGE" value="parseMain: addaed teachers comments and files hrefs" />
+    <MESSAGE value="added getName functions" />
+    <option name="LAST_COMMIT_MESSAGE" value="added getName functions" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -836,23 +847,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/get_id.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="62" selection-start-line="21" selection-start-column="62" selection-end-line="21" selection-end-column="62" />
-          <folding>
-            <element signature="e#51#69#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/parseMain.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1139">
-          <caret line="80" column="67" selection-start-line="80" selection-start-column="67" selection-end-line="80" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/parseTable.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1224">
@@ -870,6 +864,30 @@
           <folding>
             <element signature="e#52#70#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/parseMain.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="36" column="103" lean-forward="true" selection-start-line="36" selection-start-column="103" selection-end-line="36" selection-end-column="103" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/get_id.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="8" selection-start-line="5" selection-end-line="20" />
+          <folding>
+            <element signature="e#51#69#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/getName.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="21" column="91" selection-start-line="21" selection-start-column="91" selection-end-line="21" selection-end-column="91" />
         </state>
       </provider>
     </entry>
