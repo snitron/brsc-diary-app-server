@@ -11,7 +11,11 @@ use DiDom\Document;
         public $marks = array();
         public $isWeekend = false;
         public $dayName = "";
+        public $teacherComment = "";
+        public $hrefsHw = array();
     }
+
+        $BASIC_URL = "https://edu.brsc.ru/";
 
        $action = filter_input(INPUT_GET, "action", FILTER_SANITIZE_STRING);
 
@@ -69,7 +73,15 @@ use DiDom\Document;
                 if (strlen($tmp_hw) != 0)
                     $day->homeworks[$j] = strip_tags($tmp_hw);
                 else
-                    $day->homeworks[$j] = "NO_HW";
+                    $day->homeworks[$j] = "";
+
+                $a = $trS[$j]->find('td[data-lessonid]')[0]->find('a');
+
+                for($k = 0; $k < count($a); $k++)
+                    $day->hrefsHw[$k] =  $a[$k]->attr("href");
+
+                $day->teacherComment = $trS[$j]->find("td")[4]->text();
+
 
             }
 
