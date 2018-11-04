@@ -34,15 +34,15 @@ use Snoopy\Snoopy;
         $html = phpQuery::newDocument($snoopy->results);
        // $html = pq($snoopy->results);
 
-        $elements = $html->find("table[class=\"table table-border\"]");
+        $elements = $html->find("table.table table-border");
         $days = array();
 
-        $daysNames = $html->find("div h3");
+        $daysNames = $html->find("div > h3");
 
         for ($i = 0; $i < count($elements); $i++) {
             $day = new DaySheldule();
 
-            $trS = pq($elements[$i])->find("tr[class=tableborder]");
+            $trS = pq($elements[$i])->find("tr.tableborder");
 
             $day->isWeekend = false;
             $day->count = count($trS);
