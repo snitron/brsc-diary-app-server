@@ -15,8 +15,6 @@ use DiDom\Document;
         public $hrefsHw = array();
     }
 
-        $BASIC_URL = "https://edu.brsc.ru/";
-
        $action = filter_input(INPUT_GET, "action", FILTER_SANITIZE_STRING);
 
         $login = filter_input(INPUT_GET, 'login', FILTER_SANITIZE_STRING);
