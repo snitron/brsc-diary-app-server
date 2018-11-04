@@ -60,14 +60,14 @@ use Snoopy\Snoopy;
 
                 $marks = pq($trS->elements[$j])->find("td[data-mark-ids]");
 
-                if ($marks->elements != 0)
+                if ($marks->length != 0)
                     $day->marks[$j] = strip_tags($marks->elements[0]);
                 else
                     $day->marks[$j] = "";
 
-                $tmp_hw = pq($trS->elements[$j])->find('td[data-lessonid]');
+                $tmp_hw = pq($trS->elements[$j])->find('td[data-lessonid]')->elements[0];
 
-                if (strlen($tmp_hw->elements[$j]) != 0)
+                if (strlen($tmp_hw) != 0)
                     $day->homeworks[$j] = strip_tags($tmp_hw);
                 else
                     $day->homeworks[$j] = "NO_HW";
