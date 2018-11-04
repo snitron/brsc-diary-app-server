@@ -37,20 +37,21 @@ use Snoopy\Snoopy;
         $elements = $html->find("table");
         $days = array();
 
-        $daysNames = $html->find("div > h3");
+        $daysNames = $html->find("div > h3")->elements;
 
-        for ($i = 0; $i < count($elements); $i++) {
+
+        for ($i = 0; $i < $elements->length; $i++) {
             $day = new DaySheldule();
 
-            $trS = pq($elements[$i])->find("tr.tableborder");
+            $trS = pq($elements->elements[$i])->find("tr.tableborder");
 
             $day->isWeekend = false;
-            $day->count = count($trS);
+            $day->count = $trS->length;
 
-            for ($j = 0; $j < count($trS); $j++) {
+            for ($j = 0; $j < $trS->length; $j++) {
                 $wasEmpty = false;
 
-                $day->lessons[$j] = count(pq($trS[$j])->find("div[title]")) != 0 ? strip_tags(pq($trS[$j])->find("div[title]")[0]) : $wasEmpty = true;
+                $day->lessons[$j] = count(pq($trS->elements[$j])->find("div[title]")) != 0 ? strip_tags(pq($trS->elements[$j])->find("div[title]")[0]) : $wasEmpty = true;
 
                 if ($wasEmpty) {
                     $day->isWeekend = true;
@@ -58,14 +59,14 @@ use Snoopy\Snoopy;
                     break;
                 }
 
-                $marks = pq($trS[$j])->find("td[data-mark-ids]");
+                $marks = pq($trS->elements[$j])->find("td[data-mark-ids]");
 
-                if (count($marks) != 0)
-                    $day->marks[$j] = strip_tags($marks[0]);
+                if ($marks->elements != 0)
+                    $day->marks[$j] = strip_tags($marks->elements[0]);
                 else
                     $day->marks[$j] = "";
 
-                $tmp_hw = pq($trS[$j])->find('td[data-lessonid]')[0];
+                $tmp_hw = pq($trS->elements[$j])->find('td[data-lessonid]')->elements[0];
 
                 if (strlen($tmp_hw) != 0)
                     $day->homeworks[$j] = strip_tags($tmp_hw);
