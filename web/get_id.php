@@ -21,7 +21,7 @@ use Snoopy\Snoopy;
     //$array = parseId($html->find("a.h5")->get(0)->getElementsByTagName("UserId")[0]);
 //echo "<plaintext>" . $html->find("a.h5")->getStrings(0)[0] . "</plaintext>";
 
-    echo parseId($html->find("a.h5")->get(0)->getAttribute("href"));
+    echo parseId($html->find("a.h5")->get(0)->getAttribute("href"))['UserId'];
 
 
 function parseId($string){
