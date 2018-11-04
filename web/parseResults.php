@@ -76,6 +76,7 @@ for ($i = 2; $i < count($trS); $i++) {
 
 if (count($tables) == 2) {
     $trS = $tables[1]->find("tr");
+    echo count($trS);
     $length = count($results);
     for ($i = $length + 1; $i < count($trS) + $length + 1; $i++) {
         $tdS = $trS[$i - $length]->find("td");
