@@ -1,7 +1,6 @@
 <?php
 require __DIR__ . "/../vendor/autoload.php";
 use Snoopy\Snoopy;
-use Sunra\PhpSimple\HtmlDomParser;
 
 class Table{
     public $lesson = "";
@@ -31,13 +30,13 @@ $snoopy->submit("https://edu.brsc.ru/Logon/Index", $post_array);
 $snoopy->results;
 
 $snoopy->submit("https://edu.brsc.ru/user/diary/diarygradeslist?UserId=" . $userID);
-$html = HtmlDomParser::str_get_html($snoopy->results);
+$html = phpQuery::newDocument($snoopy->results);
 
-$trS = $html->find("tr");
+$trS = $html->find("tr")->elements;
 $tables = array();
 for($i = 2; $i < count($trS); $i++){
     $table = new Table();
-    $tdS = HtmlDomParser::str_get_html($trS[$i])->find("td");
+    $tdS = pq($trS[$i])->find("td")->elements;
     for($j = 1; $j < 10; $j++){
         switch ($j){
             case 1:

@@ -1,10 +1,9 @@
 <?php
 require __DIR__ . "/../vendor/autoload.php";
 use Snoopy\Snoopy;
-use Sunra\PhpSimple\HtmlDomParser;
 
-    $login = filter_input(INPUT_POST, "login", FILTER_SANITIZE_STRING);
-    $password = filter_input(INPUT_POST, "password", FILTER_SANITIZE_STRING);
+    $login = filter_input(INPUT_GET, "login", FILTER_SANITIZE_STRING);
+    $password = filter_input(INPUT_GET, "password", FILTER_SANITIZE_STRING);
 
     $snoopy = new Snoopy();
 
@@ -17,9 +16,9 @@ use Sunra\PhpSimple\HtmlDomParser;
     $snoopy->results;
 
     $snoopy->submit("https://edu.brsc.ru/User/Diary");
-    $html = HtmlDomParser::str_get_html($snoopy->results);
+    $html = phpQuery::newDocument($snoopy->results);
 
-    $array = parseId($html->find("a[class=h5]")[0]);
+    $array = parseId($html->find("a.h5")->elements[0]);
 
     echo $array['UserId'];
 

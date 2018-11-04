@@ -32,7 +32,6 @@ use Snoopy\Snoopy;
         $snoopy->submit("https://edu.brsc.ru/User/Diary?UserId=". $userID. "&Week=". $week . "&dep=0");
 
         $html = phpQuery::newDocument($snoopy->results);
-       // $html = pq($snoopy->results);
 
         $elements = $html->find("table");
         $days = array();

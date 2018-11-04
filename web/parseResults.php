@@ -31,15 +31,14 @@ $snoopy->submit("https://edu.brsc.ru/Logon/Index", $post_array);
 $snoopy->results;
 
 $snoopy->submit("https://edu.brsc.ru/user/diary/diaryresult?UserId=" . $userID);
-$html = HtmlDomParser::str_get_html($snoopy->results);
+$html = phpQuery::newDocument($snoopy->results);
 
-$tables = $html->find("table[class=\"table table-hover\"]");
+$tables = $html->find("table")->elements;
 $results = array();
 
-
-    $trS = HtmlDomParser::str_get_html($tables[0])->find("tr");
+    $trS = phpQuery::newDocument($tables[0])->find("tr")->elements;
     for($i = 2; $i < count($trS); $i++){
-        $tdS = HtmlDomParser::str_get_html($trS[$i])->find("td");
+        $tdS = phpQuery::newDocument($trS[$i])->find("td")->elements;
         $result = new Result();
 
         for($j = 0; $j < count($tdS); $j++){
@@ -75,11 +74,10 @@ $results = array();
 
 
 if(count($tables) == 2){
-    $trS = HtmlDomParser::str_get_html($tables[1])->find("tr");
+    $trS = phpQuery::newDocument($tables[1])->find("tr")->elements;
     $length = count($results);
     for($i = $length + 1; $i < count($trS) + $length + 1; $i++) {
-        $tr = HtmlDomParser::str_get_html($trS[$i - $length]);
-        $tdS = $tr->find("td");
+        $tdS = phpQuery::newDocument($trS[$i - $length])->find("td")->elements;
         $result = new Result();
         for($j = 0; $j < count($tdS); $j++){
             switch ($j) {
