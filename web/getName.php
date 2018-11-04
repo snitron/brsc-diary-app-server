@@ -22,7 +22,6 @@ $html = new Document($snoopy->results);
 
 echo parseName($html->find("tr")[0]->find("th")[0]->text());
 
-
 function parseName($string){
     return substr($string, 0, strpos($string, ','));
 }
