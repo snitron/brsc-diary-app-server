@@ -78,7 +78,8 @@ if (count($tables) == 2) {
     $trS = $tables[1]->find("tr");
     echo count($trS);
     $length = count($results);
-    for ($i = $length + 1; $i < count($trS) + $length + 1; $i++) {
+    echo "<plaintext>" . $trS[$length + 1 - $results]->html() . "</plaintext>";
+    for ($i = $length + 1; $i < count($trS) + $length; $i++) {
         $tdS = $trS[$i - $length]->find("td");
         $result = new Result();
         for ($j = 0; $j < count($tdS); $j++) {
