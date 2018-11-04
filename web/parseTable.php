@@ -71,7 +71,7 @@ for($i = 2; $i < $trS->length; $i++){
                 break;
         }
 
-        echo $tdS->elements[$j] . "<br>";
+        echo "<plaintext>" . $tdS->elements[$j] . "</plaintext><br>";
     }
     $tables[$i - 2] = $table;
 }
