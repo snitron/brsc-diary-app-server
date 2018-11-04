@@ -1,6 +1,7 @@
 <?php
 require __DIR__ . "/../vendor/autoload.php";
 use Snoopy\Snoopy;
+use DiDom\Document;
 
 class Table{
     public $lesson = "";
@@ -30,48 +31,46 @@ $snoopy->submit("https://edu.brsc.ru/Logon/Index", $post_array);
 $snoopy->results;
 
 $snoopy->submit("https://edu.brsc.ru/user/diary/diarygradeslist?UserId=" . $userID);
-$html = phpQuery::newDocument($snoopy->results);
+$html = new Document($snoopy->results);
 
 $trS = $html->find("tr");
 $tables = array();
 
-for($i = 2; $i < $trS->length; $i++){
+for($i = 2; $i < count($trS); $i++){
     $table = new Table();
-    $tdS = pq($trS[$i])->find("td");
+    $tdS = $trS[$i]->find("td");
     for($j = 1; $j < 10; $j++){
         switch ($j){
             case 1:
-                $table->lesson = strip_tags($tdS->elements[$j]);
+                $table->lesson = strip_tags($tdS[$j]->text());
                 break;
             case 2:
-                $table->average_mark1 = strip_tags($tdS->elements[$j]);
+                $table->average_mark1 = strip_tags($tdS[$j]->text());
                 break;
             case 3:
-                $table->m1 = strip_tags($tdS->elements[$j]);
+                $table->m1 = strip_tags($tdS[$j]->text());
                 break;
             case 4:
-                $table->average_mark2 = strip_tags($tdS->elements[$j]);
+                $table->average_mark2 = strip_tags($tdS[$j]->text());
                 break;
             case 5:
-                $table->m2 = strip_tags($tdS->elements[$j]);
+                $table->m2 = strip_tags($tdS[$j]->text());
                 break;
             case 6:
-                $table->average_mark3 = strip_tags($tdS->elements[$j]);
+                $table->average_mark3 = strip_tags($tdS[$j]->text());
                 break;
             case 7:
-                $table->m3 = strip_tags($tdS->elements[$j]);
+                $table->m3 = strip_tags($tdS[$j]->text());
                 break;
             case 8:
-                $table->average_mark4 = strip_tags($tdS->elements[$j]);
+                $table->average_mark4 = strip_tags($tdS[$j]->text());
                 break;
             case 9:
-                $table->m4 =strip_tags($tdS->elements[$j]);
+                $table->m4 =strip_tags($tdS[$j]->text());
                 break;
             default:
                 break;
         }
-
-        echo "<plaintext>" . $tdS->elements[$j] . "</plaintext><br>";
     }
     $tables[$i - 2] = $table;
 }
