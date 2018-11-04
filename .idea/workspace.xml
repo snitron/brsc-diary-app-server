@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2b9482ac-970a-4487-b0bd-e67c683ded41" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/web/parseResults.php" beforeDir="false" afterPath="$PROJECT_DIR$/web/parseResults.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -241,7 +241,7 @@
         <entry file="file://$PROJECT_DIR$/web/parseResults.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="253">
-              <caret line="78" column="3" selection-start-line="78" selection-start-column="3" selection-end-line="78" selection-end-column="3" />
+              <caret line="78" column="30" selection-start-line="78" selection-start-column="30" selection-end-line="78" selection-end-column="30" />
               <folding>
                 <element signature="e#52#70#0#PHP" expanded="true" />
               </folding>
@@ -428,21 +428,7 @@
       <workItem from="1541247454187" duration="23000" />
       <workItem from="1541247498119" duration="526000" />
       <workItem from="1541249186420" duration="17543000" />
-      <workItem from="1541318810142" duration="10508000" />
-    </task>
-    <task id="LOCAL-00012" summary="added 'web' folder">
-      <created>1541259148608</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1541259148608</updated>
-    </task>
-    <task id="LOCAL-00013" summary="added 'web' folder">
-      <created>1541259314248</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1541259314248</updated>
+      <workItem from="1541318810142" duration="11197000" />
     </task>
     <task id="LOCAL-00014" summary="added 'web' folder">
       <created>1541267739143</created>
@@ -773,14 +759,28 @@
       <option name="project" value="LOCAL" />
       <updated>1541329210841</updated>
     </task>
-    <option name="localTasksCounter" value="61" />
+    <task id="LOCAL-00061" summary="test parse">
+      <created>1541329333349</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1541329333349</updated>
+    </task>
+    <task id="LOCAL-00062" summary="test parse">
+      <created>1541329412320</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1541329412320</updated>
+    </task>
+    <option name="localTasksCounter" value="63" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30897000" />
+    <option name="totallyTimeSpent" value="31586000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1401919" />
@@ -902,7 +902,7 @@
     <entry file="file://$PROJECT_DIR$/web/parseResults.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="253">
-          <caret line="78" column="3" selection-start-line="78" selection-start-column="3" selection-end-line="78" selection-end-column="3" />
+          <caret line="78" column="30" selection-start-line="78" selection-start-column="30" selection-end-line="78" selection-end-column="30" />
           <folding>
             <element signature="e#52#70#0#PHP" expanded="true" />
           </folding>
