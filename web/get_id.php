@@ -19,6 +19,7 @@ use Snoopy\Snoopy;
     $html = phpQuery::newDocument($snoopy->results);
 
     $array = parseId($html->find("a.h5")->getStrings(0));
+    echo "<plaintext>" . $html->find("a.h5")->getStrings(0) . "</plaintext>";
 
     echo $array['UserId'];
 
