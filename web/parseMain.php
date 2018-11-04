@@ -12,7 +12,7 @@ use DiDom\Document;
         public $isWeekend = false;
         public $dayName = "";
         public $teacherComment = "";
-        public $hrefsHw = array();
+        public $hrefsHw = array(array());
     }
 
        $action = filter_input(INPUT_GET, "action", FILTER_SANITIZE_STRING);
@@ -76,7 +76,10 @@ use DiDom\Document;
                 $a = $trS[$j]->find('td[data-lessonid]')[0]->find('a');
 
                 for($k = 1; $k < count($a); $k++)
-                    $day->hrefsHw[$k] =  $a[$j]->attr("href");
+                    if($a[$j]->attr("href") != null)
+                        $day->hrefsHw[$j][$k] =  $a[$j]->attr("href");
+                    else
+                        $day->hrefsHw[$j][$k] = "";
 
                 $day->teacherComment = $trS[$j]->find("td")[5]->text();
 
