@@ -2,7 +2,6 @@
 
 require __DIR__ . "/../vendor/autoload.php";
 use Snoopy\Snoopy;
-use Sunra\PhpSimple\HtmlDomParser;
 
     class DaySheldule{
         public $count = 0;
@@ -13,10 +12,10 @@ use Sunra\PhpSimple\HtmlDomParser;
         public $dayName = "";
     }
 
-       $action = filter_input(INPUT_POST, "action", FILTER_SANITIZE_STRING);
+       $action = filter_input(INPUT_GET, "action", FILTER_SANITIZE_STRING);
 
-        $login = filter_input(INPUT_POST, 'login', FILTER_SANITIZE_STRING);
-        $password = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_STRING);
+        $login = filter_input(INPUT_GET, 'login', FILTER_SANITIZE_STRING);
+        $password = filter_input(INPUT_GET, 'password', FILTER_SANITIZE_STRING);
 
         $snoopy = new Snoopy();
 
@@ -28,11 +27,12 @@ use Sunra\PhpSimple\HtmlDomParser;
         $snoopy->submit("https://edu.brsc.ru/Logon/Index", $post_array);
         $snoopy->results;
 
-        $userID = filter_input(INPUT_POST, "userID", FILTER_SANITIZE_STRING);
-        $week = filter_input(INPUT_POST, "week", FILTER_SANITIZE_STRING);
+        $userID = filter_input(INPUT_GET, "userID", FILTER_SANITIZE_STRING);
+        $week = filter_input(INPUT_GET, "week", FILTER_SANITIZE_STRING);
         $snoopy->submit("https://edu.brsc.ru/User/Diary?UserId=". $userID. "&Week=". $week . "&dep=0");
 
-        $html = HtmlDomParser::str_get_html($snoopy->results);
+        $html = phpQuery::newDocument($snoopy->results);
+       // $html = pq($snoopy->results);
 
         $elements = $html->find("table[class=\"table table-border\"]");
         $days = array();
@@ -42,7 +42,7 @@ use Sunra\PhpSimple\HtmlDomParser;
         for ($i = 0; $i < count($elements); $i++) {
             $day = new DaySheldule();
 
-            $trS = HtmlDomParser::str_get_html($elements[$i])->find("tr[class=tableborder]");
+            $trS = pq($elements[$i])->find("tr[class=tableborder]");
 
             $day->isWeekend = false;
             $day->count = count($trS);
@@ -50,7 +50,7 @@ use Sunra\PhpSimple\HtmlDomParser;
             for ($j = 0; $j < count($trS); $j++) {
                 $wasEmpty = false;
 
-                $day->lessons[$j] = count(HtmlDomParser::str_get_html($trS[$j])->find("div[title]")) != 0 ? strip_tags(HtmlDomParser::str_get_html($trS[$j])->find("div[title]")[0]) : $wasEmpty = true;
+                $day->lessons[$j] = count(pq($trS[$j])->find("div[title]")) != 0 ? strip_tags(pq($trS[$j])->find("div[title]")[0]) : $wasEmpty = true;
 
                 if ($wasEmpty) {
                     $day->isWeekend = true;
@@ -58,14 +58,14 @@ use Sunra\PhpSimple\HtmlDomParser;
                     break;
                 }
 
-                $marks = HtmlDomParser::str_get_html($trS[$j])->find("td[data-mark-ids]");
+                $marks = pq($trS[$j])->find("td[data-mark-ids]");
 
                 if (count($marks) != 0)
                     $day->marks[$j] = strip_tags($marks[0]);
                 else
                     $day->marks[$j] = "";
 
-                $tmp_hw = HtmlDomParser::str_get_html($trS[$j])->find('td[data-lessonid]')[0];
+                $tmp_hw = pq($trS[$j])->find('td[data-lessonid]')[0];
 
                 if (strlen($tmp_hw) != 0)
                     $day->homeworks[$j] = strip_tags($tmp_hw);

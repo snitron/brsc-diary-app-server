@@ -2,6 +2,7 @@
 	"require": {
 		"php":">=7.1.0",
     	"sunra/php-simple-html-dom-parser": "1.5.2",
-		"pherum/snoopy": "2.0"
+		"pherum/snoopy": "2.0",
+		"electrolinux/phpquery": "0.9.6"
     }
 }
