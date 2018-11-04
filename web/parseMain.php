@@ -76,7 +76,7 @@ use DiDom\Document;
                 $a = $trS[$j]->find('td[data-lessonid]')[0]->find('a');
 
                 for($k = 1; $k < count($a); $k++)
-                    $day->hrefsHw[$k] =  $a[$k - 1]->attr("href");
+                    $day->hrefsHw[$k] =  $a[$j]->attr("href");
 
                 $day->teacherComment = $trS[$j]->find("td")[5]->text();
 
