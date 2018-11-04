@@ -21,13 +21,13 @@ use Snoopy\Snoopy;
     //$array = parseId($html->find("a.h5")->get(0)->getElementsByTagName("UserId")[0]);
 //echo "<plaintext>" . $html->find("a.h5")->getStrings(0)[0] . "</plaintext>";
 
-    echo $html->find("a.h5")->get(0)->getAttribute("UserId");
+    echo parseId($html->find("a.h5")->get(0)->getAttribute("href"));
 
 
 function parseId($string){
     $string = strtr($string, "class=\"h5\"", "");
     $b = stristr($string, "?");
-    $c = substr($b, 1, stripos($b, "\"") - 1);
+    $c = substr($b, 1);
 
     $output = array();
     parse_str($c, $output);
