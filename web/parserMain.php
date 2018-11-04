@@ -34,7 +34,7 @@ use Snoopy\Snoopy;
         $html = phpQuery::newDocument($snoopy->results);
        // $html = pq($snoopy->results);
 
-        $elements = $html->find("table.table table-border");
+        $elements = $html->find("table");
         $days = array();
 
         $daysNames = $html->find("div > h3");

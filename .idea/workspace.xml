@@ -124,14 +124,14 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="json" value="3" />
-          <entry key="php" value="3029" />
+          <entry key="php" value="3036" />
           <entry key="txt" value="21" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JSON" value="3" />
-          <entry key="PHP" value="3029" />
+          <entry key="PHP" value="3036" />
           <entry key="PLAIN_TEXT" value="21" />
         </counts>
       </usages-collector>
@@ -191,8 +191,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/parserMain.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+            <state relative-caret-position="476">
+              <caret line="52" column="66" lean-forward="true" selection-start-line="52" selection-start-column="66" selection-end-line="52" selection-end-column="66" />
             </state>
           </provider>
         </entry>
@@ -390,7 +390,7 @@
       <workItem from="1541247454187" duration="23000" />
       <workItem from="1541247498119" duration="526000" />
       <workItem from="1541249186420" duration="17543000" />
-      <workItem from="1541318810142" duration="1308000" />
+      <workItem from="1541318810142" duration="1562000" />
     </task>
     <task id="LOCAL-00001" summary="added 'web' folder">
       <created>1541243997417</created>
@@ -630,11 +630,18 @@
       <option name="project" value="LOCAL" />
       <updated>1541319796478</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="test parse">
+      <created>1541320356466</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1541320356466</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21697000" />
+    <option name="totallyTimeSpent" value="21951000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -739,8 +746,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/parserMain.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+        <state relative-caret-position="476">
+          <caret line="52" column="66" lean-forward="true" selection-start-line="52" selection-start-column="66" selection-end-line="52" selection-end-column="66" />
         </state>
       </provider>
     </entry>
