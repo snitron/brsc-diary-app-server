@@ -34,6 +34,8 @@ $html = phpQuery::newDocument($snoopy->results);
 
 $trS = $html->find("tr")->elements;
 $tables = array();
+echo count($trS);
+echo $trS[0];
 for($i = 2; $i < count($trS); $i++){
     $table = new Table();
     $tdS = pq($trS[$i])->find("td")->elements;
