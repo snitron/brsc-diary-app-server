@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2b9482ac-970a-4487-b0bd-e67c683ded41" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/getName.php" beforeDir="false" afterPath="$PROJECT_DIR$/web/getName.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -125,14 +124,14 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="json" value="4" />
-          <entry key="php" value="4974" />
+          <entry key="php" value="4979" />
           <entry key="txt" value="255" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JSON" value="4" />
-          <entry key="PHP" value="4974" />
+          <entry key="PHP" value="4979" />
           <entry key="PLAIN_TEXT" value="255" />
         </counts>
       </usages-collector>
@@ -234,7 +233,7 @@
         <entry file="file://$PROJECT_DIR$/web/getName.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="476">
-              <caret line="29" column="46" selection-start-line="29" selection-start-column="46" selection-end-line="29" selection-end-column="46" />
+              <caret line="29" column="61" selection-start-line="29" selection-start-column="61" selection-end-line="29" selection-end-column="61" />
             </state>
           </provider>
         </entry>
@@ -375,14 +374,7 @@
       <workItem from="1541247454187" duration="23000" />
       <workItem from="1541247498119" duration="526000" />
       <workItem from="1541249186420" duration="17543000" />
-      <workItem from="1541318810142" duration="17597000" />
-    </task>
-    <task id="LOCAL-00028" summary="test parse">
-      <created>1541275533999</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1541275533999</updated>
+      <workItem from="1541318810142" duration="18055000" />
     </task>
     <task id="LOCAL-00029" summary="test parse">
       <created>1541275621381</created>
@@ -720,11 +712,18 @@
       <option name="project" value="LOCAL" />
       <updated>1541346906440</updated>
     </task>
-    <option name="localTasksCounter" value="77" />
+    <task id="LOCAL-00077" summary="added getName functions">
+      <created>1541347207068</created>
+      <option name="number" value="00077" />
+      <option name="presentableId" value="LOCAL-00077" />
+      <option name="project" value="LOCAL" />
+      <updated>1541347207068</updated>
+    </task>
+    <option name="localTasksCounter" value="78" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37986000" />
+    <option name="totallyTimeSpent" value="38444000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -876,7 +875,7 @@
     <entry file="file://$PROJECT_DIR$/web/getName.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="476">
-          <caret line="29" column="46" selection-start-line="29" selection-start-column="46" selection-end-line="29" selection-end-column="46" />
+          <caret line="29" column="61" selection-start-line="29" selection-start-column="61" selection-end-line="29" selection-end-column="61" />
         </state>
       </provider>
     </entry>
