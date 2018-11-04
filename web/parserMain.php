@@ -65,9 +65,9 @@ use Snoopy\Snoopy;
                 else
                     $day->marks[$j] = "";
 
-                $tmp_hw = pq($trS->elements[$j])->find('td[data-lessonid]')->elements[0];
+                $tmp_hw = pq($trS->elements[$j])->find('td[data-lessonid]');
 
-                if (strlen($tmp_hw) != 0)
+                if (strlen($tmp_hw->elements[$j]) != 0)
                     $day->homeworks[$j] = strip_tags($tmp_hw);
                 else
                     $day->homeworks[$j] = "NO_HW";
