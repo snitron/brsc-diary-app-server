@@ -1,6 +1,7 @@
 <?php
 require __DIR__ . "/../vendor/autoload.php";
 use Snoopy\Snoopy;
+use \DiDom\Document;
 
     $login = filter_input(INPUT_GET, "login", FILTER_SANITIZE_STRING);
     $password = filter_input(INPUT_GET, "password", FILTER_SANITIZE_STRING);
@@ -16,9 +17,9 @@ use Snoopy\Snoopy;
     $snoopy->results;
 
     $snoopy->submit("https://edu.brsc.ru/User/Diary");
-    $html = phpQuery::newDocument($snoopy->results);
+    $html = new Document($snoopy->results);
 
-    echo parseId($html->find("a.h5")->get(0)->getAttribute("href"));
+    echo parseId($html->find("a.h5")[0]->getAttribute("href"));
 
 
 function parseId($string){

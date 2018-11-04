@@ -32,20 +32,16 @@ use DiDom\Document;
         $week = filter_input(INPUT_GET, "week", FILTER_SANITIZE_STRING);
         $snoopy->submit("https://edu.brsc.ru/User/Diary?UserId=". $userID. "&Week=". $week . "&dep=0");
 
-      //  $html = phpQuery::newDocument($snoopy->results);
         $html = new Document($snoopy->results);
-
 
         $elements = $html->find("table");
         $days = array();
 
         $daysNames = $html->find("div > h3");
 
-
         for ($i = 0; $i < count($elements); $i++) {
             $day = new DaySheldule();
 
-           // $trS = pq($elements[$i])->find("tr.tableborder");
             $trS = $elements[$i]->find("tr.tableborder");
             $day->isWeekend = false;
             $day->count = count($trS);
