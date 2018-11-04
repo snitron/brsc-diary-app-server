@@ -11,12 +11,20 @@ class ComposerStaticInitdeecd950229a7e0d0890a19f3901cf77
         array (
             'Snoopy\\' => 7,
         ),
+        'D' => 
+        array (
+            'DiDom\\' => 6,
+        ),
     );
 
     public static $prefixDirsPsr4 = array (
         'Snoopy\\' => 
         array (
             0 => __DIR__ . '/..' . '/pherum/snoopy/src',
+        ),
+        'DiDom\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/imangazaliev/didom/src/DiDom',
         ),
     );
 

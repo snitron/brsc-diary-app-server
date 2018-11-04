@@ -2,6 +2,7 @@
 
 require __DIR__ . "/../vendor/autoload.php";
 use Snoopy\Snoopy;
+use DiDom\Document;
 
     class DaySheldule{
         public $count = 0;
@@ -31,26 +32,28 @@ use Snoopy\Snoopy;
         $week = filter_input(INPUT_GET, "week", FILTER_SANITIZE_STRING);
         $snoopy->submit("https://edu.brsc.ru/User/Diary?UserId=". $userID. "&Week=". $week . "&dep=0");
 
-        $html = phpQuery::newDocument($snoopy->results);
+      //  $html = phpQuery::newDocument($snoopy->results);
+        $html = new Document($snoopy->results);
+
 
         $elements = $html->find("table");
         $days = array();
 
-        $daysNames = $html->find("div > h3")->elements;
+        $daysNames = $html->find("div > h3");
 
 
-        for ($i = 0; $i < $elements->length; $i++) {
+        for ($i = 0; $i < count($elements); $i++) {
             $day = new DaySheldule();
 
-            $trS = pq($elements->elements[$i])->find("tr.tableborder");
-
+           // $trS = pq($elements[$i])->find("tr.tableborder");
+            $trS = $elements[$i]->find("tr.tableborder");
             $day->isWeekend = false;
-            $day->count = $trS->length;
+            $day->count = count($trS);
 
-            for ($j = 0; $j < $trS->length; $j++) {
+            for ($j = 0; $j < count($trS); $j++) {
                 $wasEmpty = false;
 
-                $day->lessons[$j] = count(pq($trS->elements[$j])->find("div[title]")) != 0 ? strip_tags(pq($trS->elements[$j])->find("div[title]")[0]) : $wasEmpty = true;
+                $day->lessons[$j] = count($trS[$j]->find("div[title]")) != 0 ? strip_tags($trS[$j]->find("div[title]")[0]->text()) : $wasEmpty = true;
 
                 if ($wasEmpty) {
                     $day->isWeekend = true;
@@ -58,14 +61,14 @@ use Snoopy\Snoopy;
                     break;
                 }
 
-                $marks = pq($trS->elements[$j])->find("td[data-mark-ids]");
+                $marks =$trS[$j]->find("td[data-mark-ids]");
 
-                if ($marks->length != 0)
-                    $day->marks[$j] = strip_tags($marks->elements[0]);
+                if (count($marks) != 0)
+                    $day->marks[$j] = strip_tags($marks[0]->text());
                 else
                     $day->marks[$j] = "";
 
-                $tmp_hw = pq($trS->elements[$j])->find('td[data-lessonid]')->elements[0];
+                $tmp_hw = $trS[$j]->find('td[data-lessonid]')[0]->text();
 
                 if (strlen($tmp_hw) != 0)
                     $day->homeworks[$j] = strip_tags($tmp_hw);
@@ -74,7 +77,7 @@ use Snoopy\Snoopy;
 
             }
 
-            $day->dayName= strip_tags($daysNames[$i + 1]);
+            $day->dayName= strip_tags($daysNames[$i + 1]->text());
             $days[$i] = $day;
         }
 
