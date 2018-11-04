@@ -2,7 +2,6 @@
 require __DIR__ . "/../vendor/autoload.php";
 
 use Snoopy\Snoopy;
-use Sunra\PhpSimple\HtmlDomParser;
 
 class Result
 {
