@@ -78,7 +78,7 @@ if (count($tables) == 2) {
     $trS = $tables[1]->find("tr");
     echo count($trS);
     $length = count($results);
-    echo "<plaintext>" . $trS[$length + 1 - $results]->html() . "</plaintext>";
+    echo "<plaintext>" . $trS[$length + 1 - $length]->html() . "</plaintext>";
     for ($i = $length + 1; $i < count($trS) + $length; $i++) {
         $tdS = $trS[$i - $length]->find("td");
         $result = new Result();
