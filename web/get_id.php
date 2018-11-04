@@ -18,8 +18,8 @@ use Snoopy\Snoopy;
     $snoopy->submit("https://edu.brsc.ru/User/Diary");
     $html = phpQuery::newDocument($snoopy->results);
 
-    $array = parseId($html->find("a.h5")->getStrings(0));
-    echo "<plaintext>" . $html->find("a.h5")->getStrings(0) . "</plaintext>";
+    $array = parseId($html->find("a.h5")->getStrings(0)[0]);
+    echo "<plaintext>" . $html->find("a.h5")->getStrings(0)[0] . "</plaintext>";
 
     echo $array['UserId'];
 
