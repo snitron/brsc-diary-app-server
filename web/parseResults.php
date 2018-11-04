@@ -2,6 +2,7 @@
 require __DIR__ . "/../vendor/autoload.php";
 
 use Snoopy\Snoopy;
+use DiDom\Document;
 
 class Result
 {
@@ -30,70 +31,71 @@ $snoopy->submit("https://edu.brsc.ru/Logon/Index", $post_array);
 $snoopy->results;
 
 $snoopy->submit("https://edu.brsc.ru/user/diary/diaryresult?UserId=" . $userID);
-$html = phpQuery::newDocument($snoopy->results);
+$html = new Document($snoopy->results);
 
-$tables = $html->find("table")->elements;
+$tables = $html->find("table");
 $results = array();
 
-    $trS = phpQuery::newDocument($tables[0])->find("tr")->elements;
-    for($i = 2; $i < count($trS); $i++){
-        $tdS = phpQuery::newDocument($trS[$i])->find("td")->elements;
-        $result = new Result();
+$trS = $tables[0]->find("tr");
 
-        for($j = 0; $j < count($tdS); $j++){
-            switch ($j) {
-                case 1:
-                    $result->lesson = strip_tags($tdS[$j]);
-                    break;
-                case 2:
-                    $result->m1 = strip_tags($tdS[$j]);
-                    break;
-                case 3:
-                    $result->m2 = strip_tags($tdS[$j]);
-                    break;
-                case 4:
-                    $result->m3 = strip_tags($tdS[$j]);
-                    break;
-                case 5:
-                    $result->m4 = strip_tags($tdS[$j]);
-                    break;
-                case 6:
-                    $result->y = strip_tags($tdS[$j]);
-                    break;
-                case 7:
-                    $result->res = strip_tags($tdS[$j]);
-                    break;
-                default:
-                    break;
-            }
+for ($i = 2; $i < count($trS); $i++) {
+    $tdS = $trS[$i]->find("td");
+    $result = new Result();
+
+    for ($j = 0; $j < count($tdS); $j++) {
+        switch ($j) {
+            case 1:
+                $result->lesson = strip_tags($tdS[$j]->text());
+                break;
+            case 2:
+                $result->m1 = strip_tags($tdS[$j]->text());
+                break;
+            case 3:
+                $result->m2 = strip_tags($tdS[$j]->text());
+                break;
+            case 4:
+                $result->m3 = strip_tags($tdS[$j]->text());
+                break;
+            case 5:
+                $result->m4 = strip_tags($tdS[$j]->text());
+                break;
+            case 6:
+                $result->y = strip_tags($tdS[$j]->text());
+                break;
+            case 7:
+                $result->res = strip_tags($tdS[$j]->text());
+                break;
+            default:
+                break;
         }
-
-        $results[$i - 2] = $result;
     }
 
+    $results[$i - 2] = $result;
+}
 
-if(count($tables) == 2){
-    $trS = phpQuery::newDocument($tables[1])->find("tr")->elements;
+
+if (count($tables) == 2) {
+    $trS = $tables[1]->find("tr");
     $length = count($results);
-    for($i = $length + 1; $i < count($trS) + $length + 1; $i++) {
-        $tdS = phpQuery::newDocument($trS[$i - $length])->find("td")->elements;
+    for ($i = $length + 1; $i < count($trS) + $length + 1; $i++) {
+        $tdS = $trS[$i - $length]->find("td");
         $result = new Result();
-        for($j = 0; $j < count($tdS); $j++){
+        for ($j = 0; $j < count($tdS); $j++) {
             switch ($j) {
                 case 1:
-                    $result->lesson = strip_tags($tdS[$j]);
+                    $result->lesson = strip_tags($tdS[$j]->text());
                     break;
                 case 2:
-                    $result->m1 = strip_tags($tdS[$j]);
+                    $result->m1 = strip_tags($tdS[$j]->text());
                     break;
                 case 3:
-                    $result->m2 = strip_tags($tdS[$j]);
+                    $result->m2 = strip_tags($tdS[$j]->text());
                     break;
                 case 4:
-                    $result->y = strip_tags($tdS[$j]);
+                    $result->y = strip_tags($tdS[$j]->text());
                     break;
                 case 5:
-                    $result->res = strip_tags($tdS[$j]);
+                    $result->res = strip_tags($tdS[$j]->text());
                     break;
                 default:
                     break;
@@ -103,13 +105,6 @@ if(count($tables) == 2){
         $results[$i - 1] = $result;
     }
 }
-
-
-
-
-
-
-
 
 
 /*
@@ -122,19 +117,19 @@ for ($i = 2; $i < count($trS); $i++) {
         for($j = 0; $j < count($tdS); $j++) {
             switch ($j) {
                 case 1:
-                    $result->lesson = strip_tags($tdS[$j]);
+                    $result->lesson = strip_tags($tdS[$j]->text());
                     break;
                 case 2:
-                    $result->m1 = strip_tags($tdS[$j]);
+                    $result->m1 = strip_tags($tdS[$j]->text());
                     break;
                 case 3:
-                    $result->m2 = strip_tags($tdS[$j]);
+                    $result->m2 = strip_tags($tdS[$j]->text());
                     break;
                 case 4:
-                    $result->y = strip_tags($tdS[$j]);
+                    $result->y = strip_tags($tdS[$j]->text());
                     break;
                 case 5:
-                    $result->res = strip_tags($tdS[$j]);
+                    $result->res = strip_tags($tdS[$j]->text());
                     break;
                 default:
                     break;
@@ -150,25 +145,25 @@ for ($i = 2; $i < count($trS); $i++) {
         for ($j = 0; $j < count($tdS); $j++){
             switch ($j) {
                 case 1:
-                    $result->lesson = strip_tags($tdS[$j]);
+                    $result->lesson = strip_tags($tdS[$j]->text());
                     break;
                 case 2:
-                    $result->m1 = strip_tags($tdS[$j]);
+                    $result->m1 = strip_tags($tdS[$j]->text());
                     break;
                 case 3:
-                    $result->m2 = strip_tags($tdS[$j]);
+                    $result->m2 = strip_tags($tdS[$j]->text());
                     break;
                 case 4:
-                    $result->m3 = strip_tags($tdS[$j]);
+                    $result->m3 = strip_tags($tdS[$j]->text());
                     break;
                 case 5:
-                    $result->m4 = strip_tags($tdS[$j]);
+                    $result->m4 = strip_tags($tdS[$j]->text());
                     break;
                 case 6:
-                    $result->y = strip_tags($tdS[$j]);
+                    $result->y = strip_tags($tdS[$j]->text());
                     break;
                 case 7:
-                    $result->res = strip_tags($tdS[$j]);
+                    $result->res = strip_tags($tdS[$j]->text());
                     break;
                 default:
                     break;
@@ -231,6 +226,4 @@ for ($i = 0; $i < count($tables); $i++) {
 }
 */
 echo json_encode($results);
-
-echo count($tables);
 
