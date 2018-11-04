@@ -32,50 +32,50 @@ $snoopy->results;
 $snoopy->submit("https://edu.brsc.ru/user/diary/diarygradeslist?UserId=" . $userID);
 $html = phpQuery::newDocument($snoopy->results);
 
-$trS = $html->find("tr")->elements;
+$trS = $html->find("tr");
 $tables = array();
 
-for($i = 2; $i < count($trS); $i++){
+for($i = 2; $i < $trS->length; $i++){
     $table = new Table();
-    $tdS = pq($trS[$i])->find("td")->elements;
+    $tdS = pq($trS[$i])->find("td");
     for($j = 1; $j < 10; $j++){
         switch ($j){
             case 1:
-                $table->lesson = strip_tags($tdS[$j]);
+                $table->lesson = strip_tags($tdS->elements[$j]);
                 break;
             case 2:
-                $table->average_mark1 = strip_tags($tdS[$j]);
+                $table->average_mark1 = strip_tags($tdS->elements[$j]);
                 break;
             case 3:
-                $table->m1 = strip_tags($tdS[$j]);
+                $table->m1 = strip_tags($tdS->elements[$j]);
                 break;
             case 4:
-                $table->average_mark2 = strip_tags($tdS[$j]);
+                $table->average_mark2 = strip_tags($tdS->elements[$j]);
                 break;
             case 5:
-                $table->m2 = strip_tags($tdS[$j]);
+                $table->m2 = strip_tags($tdS->elements[$j]);
                 break;
             case 6:
-                $table->average_mark3 = strip_tags($tdS[$j]);
+                $table->average_mark3 = strip_tags($tdS->elements[$j]);
                 break;
             case 7:
-                $table->m3 = strip_tags($tdS[$j]);
+                $table->m3 = strip_tags($tdS->elements[$j]);
                 break;
             case 8:
-                $table->average_mark4 = strip_tags($tdS[$j]);
+                $table->average_mark4 = strip_tags($tdS->elements[$j]);
                 break;
             case 9:
-                $table->m4 =strip_tags($tdS[$j]);
+                $table->m4 =strip_tags($tdS->elements[$j]);
                 break;
             default:
                 break;
         }
+
+        echo $tdS->elements[$j] . "<br>";
     }
     $tables[$i - 2] = $table;
 }
 
 echo json_encode($tables);
 
-echo count($trS);
-echo $trS[0];
 
