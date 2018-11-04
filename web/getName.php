@@ -27,7 +27,8 @@ $html = new Document($snoopy->results);
 $result = new Person();
 
 $result->name = parseName($html->find("tr")[0]->find("th")[0]->text());
-$result->img = $html->find("span.pull-left")[1]->find("img")[0]->attr("src0");
+echo $html->find("span.pull-left")[1]->html();
+$result->img = $html->find("span.pull-left")[1]->first("img")->attr("src");
 
 echo json_encode($result);
 
