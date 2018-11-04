@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="2b9482ac-970a-4487-b0bd-e67c683ded41" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/parseMain.php" beforeDir="false" afterPath="$PROJECT_DIR$/web/parseMain.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -124,22 +125,22 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="json" value="4" />
-          <entry key="php" value="4172" />
-          <entry key="txt" value="21" />
+          <entry key="php" value="4465" />
+          <entry key="txt" value="223" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JSON" value="4" />
-          <entry key="PHP" value="4172" />
-          <entry key="PLAIN_TEXT" value="21" />
+          <entry key="PHP" value="4465" />
+          <entry key="PLAIN_TEXT" value="223" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.php.composer.actions">
         <counts>
           <entry key="addDependencyDialog_from_MainMenu" value="2" />
           <entry key="require_from_AddDependencyDialog" value="2" />
-          <entry key="updateAll_from_ComposerEditorNotificationPanel" value="6" />
+          <entry key="updateAll_from_ComposerEditorNotificationPanel" value="7" />
           <entry key="updatePackage_from_AddDependencyDialog" value="2" />
         </counts>
       </usages-collector>
@@ -149,7 +150,7 @@
           <entry key="json" value="2" />
           <entry key="lock" value="1" />
           <entry key="md" value="1" />
-          <entry key="php" value="3" />
+          <entry key="php" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
@@ -157,7 +158,7 @@
           <entry key="Ini" value="1" />
           <entry key="JSON" value="3" />
           <entry key="Markdown" value="1" />
-          <entry key="PHP" value="3" />
+          <entry key="PHP" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.php.composer.command.options">
@@ -173,8 +174,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/composer.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="40" selection-start-line="5" selection-start-column="40" selection-end-line="5" selection-end-column="40" />
+            <state relative-caret-position="34">
+              <caret line="2" column="24" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web/parseMain.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="527">
+              <caret line="80" column="61" selection-start-line="80" selection-start-column="61" selection-end-line="80" selection-end-column="61" />
             </state>
           </provider>
         </entry>
@@ -189,23 +199,6 @@
               </folding>
             </state>
           </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/parserMain.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="680">
-              <caret line="40" selection-start-line="40" selection-end-line="40" />
-              <folding>
-                <element signature="e#52#70#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/electrolinux/phpquery/composer.json">
-          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -237,7 +230,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/parseResults.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="253">
@@ -245,16 +238,6 @@
               <folding>
                 <element signature="e#52#70#0#PHP" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/sunra/php-simple-html-dom-parser/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor />
-              <second_editor />
             </state>
           </provider>
         </entry>
@@ -290,11 +273,12 @@
       <list>
         <option value="$PROJECT_DIR$/parserMain.php" />
         <option value="$PROJECT_DIR$/get_id.php" />
-        <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/web/parserMain.php" />
         <option value="$PROJECT_DIR$/web/get_id.php" />
         <option value="$PROJECT_DIR$/web/parseTable.php" />
         <option value="$PROJECT_DIR$/web/parseResults.php" />
+        <option value="$PROJECT_DIR$/composer.json" />
+        <option value="$PROJECT_DIR$/web/parseMain.php" />
       </list>
     </option>
   </component>
@@ -306,10 +290,8 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
-      <path value="$PROJECT_DIR$/vendor/sunra/php-simple-html-dom-parser" />
       <path value="$PROJECT_DIR$/vendor/composer" />
       <path value="$PROJECT_DIR$/vendor/pherum/snoopy" />
-      <path value="$PROJECT_DIR$/vendor/electrolinux/phpquery" />
       <path value="$PROJECT_DIR$/vendor/imangazaliev/didom" />
     </include_path>
   </component>
@@ -341,40 +323,7 @@
               <item name="brsc-diary-app-server" type="b2602c69:ProjectViewProjectNode" />
               <item name="brsc-diary-app-server" type="462c0819:PsiDirectoryNode" />
               <item name="vendor" type="462c0819:PsiDirectoryNode" />
-              <item name="electrolinux" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="brsc-diary-app-server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="brsc-diary-app-server" type="462c0819:PsiDirectoryNode" />
-              <item name="vendor" type="462c0819:PsiDirectoryNode" />
-              <item name="electrolinux" type="462c0819:PsiDirectoryNode" />
-              <item name="phpquery" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="brsc-diary-app-server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="brsc-diary-app-server" type="462c0819:PsiDirectoryNode" />
-              <item name="vendor" type="462c0819:PsiDirectoryNode" />
-              <item name="imangazaliev" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="brsc-diary-app-server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="brsc-diary-app-server" type="462c0819:PsiDirectoryNode" />
-              <item name="vendor" type="462c0819:PsiDirectoryNode" />
-              <item name="imangazaliev" type="462c0819:PsiDirectoryNode" />
-              <item name="didom" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="brsc-diary-app-server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="brsc-diary-app-server" type="462c0819:PsiDirectoryNode" />
-              <item name="vendor" type="462c0819:PsiDirectoryNode" />
-              <item name="pherum" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="brsc-diary-app-server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="brsc-diary-app-server" type="462c0819:PsiDirectoryNode" />
-              <item name="vendor" type="462c0819:PsiDirectoryNode" />
-              <item name="pherum" type="462c0819:PsiDirectoryNode" />
-              <item name="snoopy" type="462c0819:PsiDirectoryNode" />
+              <item name="composer" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="brsc-diary-app-server" type="b2602c69:ProjectViewProjectNode" />
@@ -428,28 +377,7 @@
       <workItem from="1541247454187" duration="23000" />
       <workItem from="1541247498119" duration="526000" />
       <workItem from="1541249186420" duration="17543000" />
-      <workItem from="1541318810142" duration="11197000" />
-    </task>
-    <task id="LOCAL-00014" summary="added 'web' folder">
-      <created>1541267739143</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1541267739143</updated>
-    </task>
-    <task id="LOCAL-00015" summary="added 'web' folder">
-      <created>1541267836854</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1541267836854</updated>
-    </task>
-    <task id="LOCAL-00016" summary="added 'web' folder">
-      <created>1541271030180</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1541271030180</updated>
+      <workItem from="1541318810142" duration="12827000" />
     </task>
     <task id="LOCAL-00017" summary="test parse">
       <created>1541271220839</created>
@@ -773,14 +701,35 @@
       <option name="project" value="LOCAL" />
       <updated>1541329412320</updated>
     </task>
-    <option name="localTasksCounter" value="63" />
+    <task id="LOCAL-00063" summary="added new methods: parseResults and parseTable.&#10;now using DiDOM parsing library">
+      <created>1541330339983</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1541330339983</updated>
+    </task>
+    <task id="LOCAL-00064" summary="parseMain: addaed teachers comments and files hrefs">
+      <created>1541331891062</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1541331891062</updated>
+    </task>
+    <task id="LOCAL-00065" summary="parseMain: addaed teachers comments and files hrefs">
+      <created>1541331900142</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1541331900142</updated>
+    </task>
+    <option name="localTasksCounter" value="66" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31586000" />
+    <option name="totallyTimeSpent" value="33216000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1401919" />
@@ -813,7 +762,9 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="added 'web' folder" />
     <MESSAGE value="test parse" />
-    <option name="LAST_COMMIT_MESSAGE" value="test parse" />
+    <MESSAGE value="added new methods: parseResults and parseTable.&#10;now using DiDOM parsing library" />
+    <MESSAGE value="parseMain: addaed teachers comments and files hrefs" />
+    <option name="LAST_COMMIT_MESSAGE" value="parseMain: addaed teachers comments and files hrefs" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -848,13 +799,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/vendor/pherum/snoopy/composer.json">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/composer.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="40" selection-start-line="5" selection-start-column="40" selection-end-line="5" selection-end-column="40" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/vendor/electrolinux/phpquery/composer.json">
       <provider selected="true" editor-type-id="text-editor" />
@@ -906,6 +850,20 @@
           <folding>
             <element signature="e#52#70#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/composer.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="24" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/parseMain.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="80" column="61" selection-start-line="80" selection-start-column="61" selection-end-line="80" selection-end-column="61" />
         </state>
       </provider>
     </entry>
