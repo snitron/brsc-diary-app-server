@@ -2,6 +2,10 @@
 require __DIR__ . "/../vendor/autoload.php";
 use Snoopy\Snoopy;
 use DiDom\Document;
+class Person{
+    public $name = "";
+    public $img = "";
+}
 
 $login = filter_input(INPUT_GET, "login", FILTER_SANITIZE_STRING);
 $password = filter_input(INPUT_GET, "password", FILTER_SANITIZE_STRING);
@@ -20,7 +24,12 @@ $snoopy->results;
 $snoopy->submit("https://edu.brsc.ru/user/diary/diaryresult?UserId=" . $userID);
 $html = new Document($snoopy->results);
 
-echo parseName($html->find("tr")[0]->find("th")[0]->text());
+$result = new Person();
+
+$result->name = parseName($html->find("tr")[0]->find("th")[0]->text());
+$result->img = $html->find("span.pull-left")[0]->find("img")[0]->attr("src0");
+
+echo json_encode($result);
 
 function parseName($string){
     return substr($string, 0, strpos($string, ','));
