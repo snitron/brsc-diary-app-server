@@ -61,10 +61,10 @@ use DiDom\Document;
                     break;
                 }
 
-                $marks =$trS[$j]->find("td[data-mark-ids]");
+                $marks = $trS[$j]->find("td")[4]->text();
 
-                if (count($marks) != 0)
-                    $day->marks[$j] = strip_tags($marks[0]->text());
+                if (strlen($marks) != 0)
+                    $day->marks[$j] = strip_tags($marks);
                 else
                     $day->marks[$j] = "";
 
