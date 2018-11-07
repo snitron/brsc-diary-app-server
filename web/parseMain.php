@@ -83,7 +83,7 @@ use DiDom\Document;
                     else
                         $day->hrefsHw[$j][$k] = "";
 
-                $day->teacherComment[$i] = strlen($trS[$j]->find("td")[5]->text()) != 0 ? $trS[$j]->find("td")[5]->text() : "";
+                $day->teacherComment[$i] = strlen($trS[$j]->find("td")[5]->text()) != 0 ? $trS[$j]->find("td")[5]->text() : null;
 
                 array_filter($day->hrefsHw[$j], function($value) { return $value !== '' && $value !== null; });
             }
