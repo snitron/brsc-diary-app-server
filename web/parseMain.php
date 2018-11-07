@@ -15,6 +15,9 @@ use DiDom\Document;
         public $hrefHw = array(
             array()
         );
+        public $hrefHwNames = array(
+            array()
+        );
     }
 
        $action = filter_input(INPUT_GET, "action", FILTER_SANITIZE_STRING);
@@ -79,15 +82,20 @@ use DiDom\Document;
 
                 if(count($a) != 0) {
                     for ($k = 1; $k < count($a); $k++)
-                        if ($a[$k] != null && $a[$k]->attr('href') != "#" && $a[$k]->attr('href') != "")
+                        if ($a[$k] != null && $a[$k]->attr('href') != "#" && $a[$k]->attr('href') != "") {
                             $day->hrefHw[$j][$k - 1] = $a[$k]->attr("href");
-                        else
-                            $day->hrefHw[$j][$k] = null;
-                }else
+                            $day->hrefHwNames[$j][$k - 1] = strip_tags($a[$k]->text());
+                        }
+                        else {
+                            $day->hrefHw[$j][$k - 1] = null;
+                            $days->hrefHwNames[$j][$k - 1] = null;
+                        }
+                }else{
                     $day->hrefHw[$j] = null;
-                $day->teacherComment[$j] = $trS[$j]->find("td")[5]->text() == "" ? $trS[$j]->find("td")[5]->text() : null;
+                    $day->hrefHwNames[$j] = null;
+                }
 
-                echo "txt" . $trS[$j]->find("td")[5]->text() . "txt";
+                $day->teacherComment[$j] = $trS[$j]->find("td")[5]->text() != "" ? $trS[$j]->find("td")[5]->text() : null;
 
                 array_filter($day->hrefHw[$j], function($value) { return $value !== '' && $value !== null; });
             }
