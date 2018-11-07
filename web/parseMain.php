@@ -81,7 +81,7 @@ use DiDom\Document;
                     if($a[$k] != null && $a[$k]->attr('href') != "#" && $a[$k]->attr('href') != "")
                         $day->hrefsHw[$j][$k] =  $a[$k]->attr("href");
                     else
-                        $day->hrefsHw[$j][$k] = "";
+                        $day->hrefsHw[$j][$k] = null;
 
                 $day->teacherComment[$j] = $trS[$j]->find("td")[5]->text() == " " ? $trS[$j]->find("td")[5]->text() : null;
 
