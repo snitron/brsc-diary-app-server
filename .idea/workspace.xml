@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2b9482ac-970a-4487-b0bd-e67c683ded41" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/getId.php" beforeDir="false" afterPath="$PROJECT_DIR$/web/getId.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/getName.php" beforeDir="false" afterPath="$PROJECT_DIR$/web/getName.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/parseMain.php" beforeDir="false" afterPath="$PROJECT_DIR$/web/parseMain.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/parseResults.php" beforeDir="false" afterPath="$PROJECT_DIR$/web/parseResults.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/parseTable.php" beforeDir="false" afterPath="$PROJECT_DIR$/web/parseTable.php" afterDir="false" />
-    </list>
+    <list default="true" id="2b9482ac-970a-4487-b0bd-e67c683ded41" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -394,14 +387,7 @@
       <workItem from="1541318810142" duration="21537000" />
       <workItem from="1541407730312" duration="607000" />
       <workItem from="1541451377520" duration="719000" />
-      <workItem from="1541607634678" duration="6368000" />
-    </task>
-    <task id="LOCAL-00048" summary="test parse">
-      <created>1541323278625</created>
-      <option name="number" value="00048" />
-      <option name="presentableId" value="LOCAL-00048" />
-      <option name="project" value="LOCAL" />
-      <updated>1541323278625</updated>
+      <workItem from="1541607634678" duration="6988000" />
     </task>
     <task id="LOCAL-00049" summary="test parse">
       <created>1541323903244</created>
@@ -739,14 +725,21 @@
       <option name="project" value="LOCAL" />
       <updated>1541615780242</updated>
     </task>
-    <option name="localTasksCounter" value="97" />
+    <task id="LOCAL-00097" summary="added getName functions">
+      <created>1541619882019</created>
+      <option name="number" value="00097" />
+      <option name="presentableId" value="LOCAL-00097" />
+      <option name="project" value="LOCAL" />
+      <updated>1541619882019</updated>
+    </task>
+    <option name="localTasksCounter" value="98" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49620000" />
+    <option name="totallyTimeSpent" value="50240000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14498934" />
