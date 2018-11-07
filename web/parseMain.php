@@ -95,7 +95,7 @@ use DiDom\Document;
                     $day->hrefHwNames[$j] = null;
                 }
 
-                $day->teacherComment[$j] = $trS[$j]->find("td")[5]->text() != "" ? $trS[$j]->find("td")[5]->text() : null;
+                $day->teacherComment[$j] = trim($trS[$j]->find("td")[5]->text()) != "" ? trim($trS[$j]->find("td")[5]->text())  : null;
 
                 array_filter($day->hrefHw[$j], function($value) { return $value !== '' && $value !== null; });
             }
