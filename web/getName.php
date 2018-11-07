@@ -1,36 +1,44 @@
 <?php
 require __DIR__ . "/../vendor/autoload.php";
+
 use Snoopy\Snoopy;
 use DiDom\Document;
-class Person{
+
+class Person
+{
     public $name = "";
     public $img = "";
 }
 
-$login = filter_input(INPUT_POST, "login", FILTER_SANITIZE_STRING);
-$password = filter_input(INPUT_POST, "password", FILTER_SANITIZE_STRING);
-$userID = filter_input(INPUT_POST, "userID", FILTER_SANITIZE_STRING);
+$headers = getallheaders();
+if ($headers['User-Agent'] == 'Nitron Apps BRSC Diary Http Connector') {
 
-$snoopy = new Snoopy();
+    $login = filter_input(INPUT_POST, "login", FILTER_SANITIZE_STRING);
+    $password = filter_input(INPUT_POST, "password", FILTER_SANITIZE_STRING);
+    $userID = filter_input(INPUT_POST, "userID", FILTER_SANITIZE_STRING);
 
-$post_array = array();
-$post_array['Login'] = $login;
-$post_array['Password'] = $password;
+    $snoopy = new Snoopy();
 
-$snoopy->maxredirs = 2;
-$snoopy->submit("https://edu.brsc.ru/Logon/Index", $post_array);
-$snoopy->results;
+    $post_array = array();
+    $post_array['Login'] = $login;
+    $post_array['Password'] = $password;
 
-$snoopy->submit("https://edu.brsc.ru/user/diary/diaryresult?UserId=" . $userID);
-$html = new Document($snoopy->results);
+    $snoopy->maxredirs = 2;
+    $snoopy->submit("https://edu.brsc.ru/Logon/Index", $post_array);
+    $snoopy->results;
 
-$result = new Person();
+    $snoopy->submit("https://edu.brsc.ru/user/diary/diaryresult?UserId=" . $userID);
+    $html = new Document($snoopy->results);
 
-$result->name = parseName($html->find("tr")[0]->find("th")[0]->text());
-$result->img = $html->find("span.pull-left")[1]->first("img")->attr("src");
+    $result = new Person();
 
-echo json_encode($result);
+    $result->name = parseName($html->find("tr")[0]->find("th")[0]->text());
+    $result->img = $html->find("span.pull-left")[1]->first("img")->attr("src");
 
-function parseName($string){
+    echo json_encode($result);
+}
+
+function parseName($string)
+{
     return substr($string, 0, strpos($string, ','));
 }

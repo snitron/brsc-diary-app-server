@@ -1,8 +1,11 @@
 <?php
 require __DIR__ . "/../vendor/autoload.php";
+
 use Snoopy\Snoopy;
 use \DiDom\Document;
 
+$headers = getallheaders();
+if ($headers['User-Agent'] == 'Nitron Apps BRSC Diary Http Connector') {
     $login = filter_input(INPUT_POST, "login", FILTER_SANITIZE_STRING);
     $password = filter_input(INPUT_POST, "password", FILTER_SANITIZE_STRING);
 
@@ -21,8 +24,9 @@ use \DiDom\Document;
 
     echo parseId($html->find("a.h5")[0]->getAttribute("href"));
 
-
-function parseId($string){
+}
+function parseId($string)
+{
     $b = stristr($string, "?");
     $c = substr($b, 1);
 
