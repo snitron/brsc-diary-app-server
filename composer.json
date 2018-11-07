@@ -2,6 +2,7 @@
 	"require": {
 		"php":">=7.1.0",
 		"pherum/snoopy": "2.0",
-		"imangazaliev/didom": "1.13"
+		"imangazaliev/didom": "1.13",
+		"ralouphie/getallheaders": "2.0.5"
     }
 }
