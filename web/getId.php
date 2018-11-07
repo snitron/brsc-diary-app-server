@@ -6,6 +6,8 @@ use \DiDom\Document;
     $login = filter_input(INPUT_POST, "login", FILTER_SANITIZE_STRING);
     $password = filter_input(INPUT_POST, "password", FILTER_SANITIZE_STRING);
 
+    echo $login . " " . $password . " ";
+
     $snoopy = new Snoopy();
 
     $post_array = array();
