@@ -12,7 +12,7 @@ use DiDom\Document;
         public $isWeekend = false;
         public $dayName = "";
         public $teacherComment = array();
-        public $hrefsHw = array(
+        public $hrefHw = array(
             array()
         );
     }
@@ -80,14 +80,14 @@ use DiDom\Document;
                 if(count($a) != 0) {
                     for ($k = 1; $k < count($a); $k++)
                         if ($a[$k] != null && $a[$k]->attr('href') != "#" && $a[$k]->attr('href') != "")
-                            $day->hrefsHw[$j][$k - 1] = $a[$k]->attr("href");
+                            $day->hrefHw[$j][$k - 1] = $a[$k]->attr("href");
                         else
-                            $day->hrefsHw[$j][$k] = null;
+                            $day->hrefHw[$j][$k] = null;
                 }else
-                    $day->hrefsHw[$j] = null;
+                    $day->hrefHw[$j] = null;
                 $day->teacherComment[$j] = $trS[$j]->find("td")[5]->text() == " " ? $trS[$j]->find("td")[5]->text() : null;
 
-                array_filter($day->hrefsHw[$j], function($value) { return $value !== '' && $value !== null; });
+                array_filter($day->hrefHw[$j], function($value) { return $value !== '' && $value !== null; });
             }
 
 
