@@ -11,7 +11,7 @@ use DiDom\Document;
         public $marks = array();
         public $isWeekend = false;
         public $dayName = "";
-        public $teacherComment = "";
+        public $teacherComment = array();
         public $hrefsHw = array(
             array()
         );
@@ -83,7 +83,7 @@ use DiDom\Document;
                     else
                         $day->hrefsHw[$j][$k] = "";
 
-                $day->teacherComment = $trS[$j]->find("td")[5]->text();
+                $day->teacherComment[$i] = $trS[$j]->find("td")[5]->text();
 
 
             }
