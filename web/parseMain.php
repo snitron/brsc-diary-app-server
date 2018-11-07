@@ -84,7 +84,7 @@ use DiDom\Document;
                     for ($k = 1; $k < count($a); $k++)
                         if ($a[$k] != null && $a[$k]->attr('href') != "#" && $a[$k]->attr('href') != "") {
                             $day->hrefHw[$j][$k - 1] = $a[$k]->attr("href");
-                            $day->hrefHwNames[$j][$k - 1] = strip_tags($a[$k]->text());
+                            $day->hrefHwNames[$j][$k - 1] = trim(strip_tags($a[$k]->text()));
                         }
                         else {
                             $day->hrefHw[$j][$k - 1] = null;
