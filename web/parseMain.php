@@ -77,12 +77,14 @@ use DiDom\Document;
 
                 $a = $trS[$j]->find('td[data-lessonid]')[0]->find('a');
 
-                for($k = 0; $k < count($a); $k++)
-                    if($a[$k] != null && $a[$k]->attr('href') != "#" && $a[$k]->attr('href') != "")
-                        $day->hrefsHw[$j][$k] =  $a[$k]->attr("href");
-                    else
-                        $day->hrefsHw[$j][$k] = null;
-
+                if(count($a) != 0) {
+                    for ($k = 0; $k < count($a); $k++)
+                        if ($a[$k] != null && $a[$k]->attr('href') != "#" && $a[$k]->attr('href') != "")
+                            $day->hrefsHw[$j][$k] = $a[$k]->attr("href");
+                        else
+                            $day->hrefsHw[$j][$k] = null;
+                }else
+                    $day->hrefsHw[$j] = null;
                 $day->teacherComment[$j] = $trS[$j]->find("td")[5]->text() == " " ? $trS[$j]->find("td")[5]->text() : null;
 
                 array_filter($day->hrefsHw[$j], function($value) { return $value !== '' && $value !== null; });

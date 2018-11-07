@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2b9482ac-970a-4487-b0bd-e67c683ded41" name="Default Changelist" comment="">
+    <list default="true" id="2b9482ac-970a-4487-b0bd-e67c683ded41" name="Default Changelist" comment="added getName functions">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/parseMain.php" beforeDir="false" afterPath="$PROJECT_DIR$/web/parseMain.php" afterDir="false" />
     </list>
@@ -127,14 +127,14 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="json" value="4" />
-          <entry key="php" value="5134" />
+          <entry key="php" value="5199" />
           <entry key="txt" value="255" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JSON" value="4" />
-          <entry key="PHP" value="5134" />
+          <entry key="PHP" value="5199" />
           <entry key="PLAIN_TEXT" value="255" />
         </counts>
       </usages-collector>
@@ -185,8 +185,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/parseMain.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="427">
-              <caret line="85" column="123" selection-start-line="85" selection-start-column="123" selection-end-line="85" selection-end-column="123" />
+            <state relative-caret-position="381">
+              <caret line="97" column="16" selection-start-line="97" selection-start-column="16" selection-end-line="97" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -385,28 +385,7 @@
       <workItem from="1541318810142" duration="21537000" />
       <workItem from="1541407730312" duration="607000" />
       <workItem from="1541451377520" duration="719000" />
-      <workItem from="1541607634678" duration="2868000" />
-    </task>
-    <task id="LOCAL-00038" summary="test parse">
-      <created>1541321318775</created>
-      <option name="number" value="00038" />
-      <option name="presentableId" value="LOCAL-00038" />
-      <option name="project" value="LOCAL" />
-      <updated>1541321318775</updated>
-    </task>
-    <task id="LOCAL-00039" summary="test parse">
-      <created>1541321332012</created>
-      <option name="number" value="00039" />
-      <option name="presentableId" value="LOCAL-00039" />
-      <option name="project" value="LOCAL" />
-      <updated>1541321332012</updated>
-    </task>
-    <task id="LOCAL-00040" summary="test parse">
-      <created>1541321475319</created>
-      <option name="number" value="00040" />
-      <option name="presentableId" value="LOCAL-00040" />
-      <option name="project" value="LOCAL" />
-      <updated>1541321475319</updated>
+      <workItem from="1541607634678" duration="3355000" />
     </task>
     <task id="LOCAL-00041" summary="test parse">
       <created>1541321533234</created>
@@ -730,11 +709,32 @@
       <option name="project" value="LOCAL" />
       <updated>1541612413440</updated>
     </task>
-    <option name="localTasksCounter" value="87" />
+    <task id="LOCAL-00087" summary="added getName functions">
+      <created>1541612541110</created>
+      <option name="number" value="00087" />
+      <option name="presentableId" value="LOCAL-00087" />
+      <option name="project" value="LOCAL" />
+      <updated>1541612541110</updated>
+    </task>
+    <task id="LOCAL-00088" summary="added getName functions">
+      <created>1541612636334</created>
+      <option name="number" value="00088" />
+      <option name="presentableId" value="LOCAL-00088" />
+      <option name="project" value="LOCAL" />
+      <updated>1541612636334</updated>
+    </task>
+    <task id="LOCAL-00089" summary="added getName functions">
+      <created>1541612772309</created>
+      <option name="number" value="00089" />
+      <option name="presentableId" value="LOCAL-00089" />
+      <option name="project" value="LOCAL" />
+      <updated>1541612772309</updated>
+    </task>
+    <option name="localTasksCounter" value="90" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46120000" />
+    <option name="totallyTimeSpent" value="46607000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -743,6 +743,7 @@
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14498934" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info active="true" anchor="bottom" id="Messages" sideWeight="0.49946696" visible="true" weight="0.32936078" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -754,7 +755,7 @@
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="10" />
-      <window_info active="true" anchor="bottom" id="Event Log" order="11" side_tool="true" visible="true" weight="0.20585048" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50053304" side_tool="true" visible="true" weight="0.32936078" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -855,8 +856,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/parseMain.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="427">
-          <caret line="85" column="123" selection-start-line="85" selection-start-column="123" selection-end-line="85" selection-end-column="123" />
+        <state relative-caret-position="381">
+          <caret line="97" column="16" selection-start-line="97" selection-start-column="16" selection-end-line="97" selection-end-column="16" />
         </state>
       </provider>
     </entry>
