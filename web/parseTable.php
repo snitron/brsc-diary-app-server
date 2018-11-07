@@ -22,9 +22,9 @@ $headers = getallheaders();
 if ($headers['User-Agent'] == 'Nitron Apps BRSC Diary Http Connector') {
 
 
-    $login = filter_input(INPUT_POST, "login", FILTER_SANITIZE_STRING);
-    $password = filter_input(INPUT_POST, "password", FILTER_SANITIZE_STRING);
-    $userID = filter_input(INPUT_POST, "userID", FILTER_SANITIZE_STRING);
+    $login = filter_input(INPUT_GET, "login", FILTER_SANITIZE_STRING);
+    $password = filter_input(INPUT_GET, "password", FILTER_SANITIZE_STRING);
+    $userID = filter_input(INPUT_GET, "userID", FILTER_SANITIZE_STRING);
 
 
     $snoopy = new Snoopy();

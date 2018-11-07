@@ -24,10 +24,10 @@ class DaySheldule
 
 $headers = getallheaders();
 if ($headers['User-Agent'] == 'Nitron Apps BRSC Diary Http Connector') {
-    $action = filter_input(INPUT_POST, "action", FILTER_SANITIZE_STRING);
+    $action = filter_input(INPUT_GET, "action", FILTER_SANITIZE_STRING);
 
-    $login = filter_input(INPUT_POST, 'login', FILTER_SANITIZE_STRING);
-    $password = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_STRING);
+    $login = filter_input(INPUT_GET, 'login', FILTER_SANITIZE_STRING);
+    $password = filter_input(INPUT_GET, 'password', FILTER_SANITIZE_STRING);
 
     $snoopy = new Snoopy();
 
@@ -39,8 +39,8 @@ if ($headers['User-Agent'] == 'Nitron Apps BRSC Diary Http Connector') {
     $snoopy->submit("https://edu.brsc.ru/Logon/Index", $post_array);
     $snoopy->results;
 
-    $userID = filter_input(INPUT_POST, "userID", FILTER_SANITIZE_STRING);
-    $week = filter_input(INPUT_POST, "week", FILTER_SANITIZE_STRING);
+    $userID = filter_input(INPUT_GET, "userID", FILTER_SANITIZE_STRING);
+    $week = filter_input(INPUT_GET, "week", FILTER_SANITIZE_STRING);
     $snoopy->submit("https://edu.brsc.ru/User/Diary?UserId=" . $userID . "&Week=" . $week . "&dep=0");
 
     $html = new Document($snoopy->results);
