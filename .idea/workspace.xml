@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2b9482ac-970a-4487-b0bd-e67c683ded41" name="Default Changelist" comment="" />
+    <list default="true" id="2b9482ac-970a-4487-b0bd-e67c683ded41" name="Default Changelist" comment="added getName functions">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/parseTable.php" beforeDir="false" afterPath="$PROJECT_DIR$/web/parseTable.php" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -124,23 +127,23 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="json" value="4" />
-          <entry key="php" value="5557" />
+          <entry key="php" value="5558" />
           <entry key="txt" value="255" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JSON" value="4" />
-          <entry key="PHP" value="5557" />
+          <entry key="PHP" value="5558" />
           <entry key="PLAIN_TEXT" value="255" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.php.composer.actions">
         <counts>
-          <entry key="addDependencyDialog_from_MainMenu" value="3" />
-          <entry key="require_from_AddDependencyDialog" value="2" />
+          <entry key="addDependencyDialog_from_MainMenu" value="4" />
+          <entry key="require_from_AddDependencyDialog" value="3" />
           <entry key="updateAll_from_ComposerEditorNotificationPanel" value="7" />
-          <entry key="updatePackage_from_AddDependencyDialog" value="2" />
+          <entry key="updatePackage_from_AddDependencyDialog" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -162,8 +165,8 @@
       </usages-collector>
       <usages-collector id="statistics.php.composer.command.options">
         <counts>
-          <entry key="require_with_--ansi_--no-interaction_--no-progress.default" value="2" />
-          <entry key="updatePackage_with_--ansi_--no-interaction_--no-progress.default" value="2" />
+          <entry key="require_with_--ansi_--no-interaction_--no-progress.default" value="3" />
+          <entry key="updatePackage_with_--ansi_--no-interaction_--no-progress.default" value="3" />
         </counts>
       </usages-collector>
     </session>
@@ -208,8 +211,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/parseTable.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+            <state relative-caret-position="221">
+              <caret line="15" column="20" lean-forward="true" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
               <folding>
                 <element signature="e#51#69#0#PHP" expanded="true" />
               </folding>
@@ -310,6 +313,7 @@
       <path value="$PROJECT_DIR$/vendor/composer" />
       <path value="$PROJECT_DIR$/vendor/pherum/snoopy" />
       <path value="$PROJECT_DIR$/vendor/imangazaliev/didom" />
+      <path value="$PROJECT_DIR$/vendor/ralouphie/getallheaders" />
     </include_path>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
@@ -397,21 +401,7 @@
       <workItem from="1541318810142" duration="21537000" />
       <workItem from="1541407730312" duration="607000" />
       <workItem from="1541451377520" duration="719000" />
-      <workItem from="1541607634678" duration="7808000" />
-    </task>
-    <task id="LOCAL-00052" summary="test parse">
-      <created>1541324360945</created>
-      <option name="number" value="00052" />
-      <option name="presentableId" value="LOCAL-00052" />
-      <option name="project" value="LOCAL" />
-      <updated>1541324360945</updated>
-    </task>
-    <task id="LOCAL-00053" summary="test parse">
-      <created>1541324647656</created>
-      <option name="number" value="00053" />
-      <option name="presentableId" value="LOCAL-00053" />
-      <option name="project" value="LOCAL" />
-      <updated>1541324647656</updated>
+      <workItem from="1541607634678" duration="8512000" />
     </task>
     <task id="LOCAL-00054" summary="test parse">
       <created>1541327565086</created>
@@ -742,11 +732,25 @@
       <option name="project" value="LOCAL" />
       <updated>1541621402549</updated>
     </task>
-    <option name="localTasksCounter" value="101" />
+    <task id="LOCAL-00101" summary="added getName functions">
+      <created>1541621673794</created>
+      <option name="number" value="00101" />
+      <option name="presentableId" value="LOCAL-00101" />
+      <option name="project" value="LOCAL" />
+      <updated>1541621673794</updated>
+    </task>
+    <task id="LOCAL-00102" summary="added getName functions">
+      <created>1541621862987</created>
+      <option name="number" value="00102" />
+      <option name="presentableId" value="LOCAL-00102" />
+      <option name="project" value="LOCAL" />
+      <updated>1541621862987</updated>
+    </task>
+    <option name="localTasksCounter" value="103" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="51060000" />
+    <option name="totallyTimeSpent" value="51764000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -876,8 +880,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/parseTable.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+        <state relative-caret-position="221">
+          <caret line="15" column="20" lean-forward="true" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
           <folding>
             <element signature="e#51#69#0#PHP" expanded="true" />
           </folding>
