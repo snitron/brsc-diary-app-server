@@ -85,8 +85,9 @@ use DiDom\Document;
 
                 $day->teacherComment[$i] = strlen($trS[$j]->find("td")[5]->text()) != 0 ? $trS[$j]->find("td")[5]->text() : "";
 
-
+                array_filter($day->hrefsHw[$j], function($value) { return $value !== '' && $value !== null; });
             }
+
 
             $day->dayName= strip_tags($daysNames[$i + 1]->text());
             $days[$i] = $day;
