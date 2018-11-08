@@ -15,7 +15,7 @@ use Behat\Mink\Driver\GoutteDriver;
     $session->start();
 
     $session->visit("https://edu.brsc.ru/Logon/Index");
-    $btn = $session->getPage()->findButton("btn btn-default btn-lg");
+    $btn = $session->getPage()->findButton("Войти");
 
     $login_et = $session->getPage()->findField("Login");
     $password_et = $session->getPage()->findField("Password");
@@ -23,6 +23,7 @@ use Behat\Mink\Driver\GoutteDriver;
     $login_et->setValue($login);
     $password_et->setValue($password);
 
+    $btn->click();
     $btn->press();
 
     echo $session->getPage()->getContent();
