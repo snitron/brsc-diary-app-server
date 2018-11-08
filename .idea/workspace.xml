@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2b9482ac-970a-4487-b0bd-e67c683ded41" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sleepy-stream-55128.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sleepy-stream-55128.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/autoload_static.php" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/autoload_static.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vendor/composer/installed.json" beforeDir="false" afterPath="$PROJECT_DIR$/vendor/composer/installed.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/getIdNew.php" beforeDir="false" afterPath="$PROJECT_DIR$/web/getIdNew.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -205,12 +197,14 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="php" value="917" />
+          <entry key="php" value="930" />
+          <entry key="txt" value="8" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PHP" value="917" />
+          <entry key="PHP" value="930" />
+          <entry key="PLAIN_TEXT" value="8" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.php.composer.command.options">
@@ -257,8 +251,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/getIdNew.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="383">
-              <caret line="27" column="40" selection-start-line="27" selection-start-column="40" selection-end-line="27" selection-end-column="40" />
+            <state relative-caret-position="390">
+              <caret line="26" column="22" selection-start-line="26" selection-start-column="22" selection-end-line="26" selection-end-column="22" />
               <folding>
                 <element signature="e#52#70#0#PHP" expanded="true" />
               </folding>
@@ -290,8 +284,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/getId.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="18" column="21" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="52" />
+            <state relative-caret-position="195">
+              <caret line="14" column="34" lean-forward="true" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -485,21 +479,7 @@
       <workItem from="1541407730312" duration="607000" />
       <workItem from="1541451377520" duration="719000" />
       <workItem from="1541607634678" duration="8512000" />
-      <workItem from="1541696860434" duration="5346000" />
-    </task>
-    <task id="LOCAL-00063" summary="added new methods: parseResults and parseTable.&#10;now using DiDOM parsing library">
-      <created>1541330339983</created>
-      <option name="number" value="00063" />
-      <option name="presentableId" value="LOCAL-00063" />
-      <option name="project" value="LOCAL" />
-      <updated>1541330339983</updated>
-    </task>
-    <task id="LOCAL-00064" summary="parseMain: addaed teachers comments and files hrefs">
-      <created>1541331891062</created>
-      <option name="number" value="00064" />
-      <option name="presentableId" value="LOCAL-00064" />
-      <option name="project" value="LOCAL" />
-      <updated>1541331891062</updated>
+      <workItem from="1541696860434" duration="6351000" />
     </task>
     <task id="LOCAL-00065" summary="parseMain: addaed teachers comments and files hrefs">
       <created>1541331900142</created>
@@ -830,14 +810,28 @@
       <option name="project" value="LOCAL" />
       <updated>1541700923695</updated>
     </task>
-    <option name="localTasksCounter" value="112" />
+    <task id="LOCAL-00112" summary="added getName functions">
+      <created>1541702760895</created>
+      <option name="number" value="00112" />
+      <option name="presentableId" value="LOCAL-00112" />
+      <option name="project" value="LOCAL" />
+      <updated>1541702760904</updated>
+    </task>
+    <task id="LOCAL-00113" summary="test">
+      <created>1541703255235</created>
+      <option name="number" value="00113" />
+      <option name="presentableId" value="LOCAL-00113" />
+      <option name="project" value="LOCAL" />
+      <updated>1541703255280</updated>
+    </task>
+    <option name="localTasksCounter" value="114" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="57110000" />
+    <option name="totallyTimeSpent" value="58115000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="25" width="1432" height="775" extended-state="0" />
+    <frame x="0" y="25" width="1432" height="775" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49905124" visible="true" weight="0.1315029" />
@@ -874,7 +868,8 @@
     <MESSAGE value="added new methods: parseResults and parseTable.&#10;now using DiDOM parsing library" />
     <MESSAGE value="parseMain: addaed teachers comments and files hrefs" />
     <MESSAGE value="added getName functions" />
-    <option name="LAST_COMMIT_MESSAGE" value="added getName functions" />
+    <MESSAGE value="test" />
+    <option name="LAST_COMMIT_MESSAGE" value="test" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -966,15 +961,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/getId.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="18" column="21" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="52" />
+        <state relative-caret-position="195">
+          <caret line="14" column="34" lean-forward="true" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/getIdNew.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="383">
-          <caret line="27" column="40" selection-start-line="27" selection-start-column="40" selection-end-line="27" selection-end-column="40" />
+        <state relative-caret-position="390">
+          <caret line="26" column="22" selection-start-line="26" selection-start-column="22" selection-end-line="26" selection-end-column="22" />
           <folding>
             <element signature="e#52#70#0#PHP" expanded="true" />
           </folding>
