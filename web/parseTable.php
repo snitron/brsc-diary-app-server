@@ -55,25 +55,25 @@ if ($headers['User-Agent'] == 'Nitron Apps BRSC Diary Http Connector') {
                     $table->average_mark1 = strip_tags($tdS[$j]->text());
                     break;
                 case 3:
-                    $table->m1 = strip_tags($tdS[$j]->text());
+                    $table->m1 = trim(strip_tags($tdS[$j]->text()));
                     break;
                 case 4:
                     $table->average_mark2 = strip_tags($tdS[$j]->text());
                     break;
                 case 5:
-                    $table->m2 = strip_tags($tdS[$j]->text());
+                    $table->m2 = trim(strip_tags($tdS[$j]->text()));
                     break;
                 case 6:
                     $table->average_mark3 = strip_tags($tdS[$j]->text());
                     break;
                 case 7:
-                    $table->m3 = strip_tags($tdS[$j]->text());
+                    $table->m3 = trim(strip_tags($tdS[$j]->text()));
                     break;
                 case 8:
                     $table->average_mark4 = strip_tags($tdS[$j]->text());
                     break;
                 case 9:
-                    $table->m4 = strip_tags($tdS[$j]->text());
+                    $table->m4 = trim(strip_tags($tdS[$j]->text()));
                     break;
                 default:
                     break;
