@@ -24,6 +24,7 @@ use Behat\Mink\Driver\GoutteDriver;
     $password_et->setValue($password);
 
     $btn->press();
+    $session->wait(5);
 
     echo $session->getPage()->getHtml();
 
