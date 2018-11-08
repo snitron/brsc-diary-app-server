@@ -3,35 +3,29 @@ require __DIR__ . "/../vendor/autoload.php";
 
 use Snoopy\Snoopy;
 use \DiDom\Document;
+use Behat\Mink\Session;
+use Behat\Mink\Driver\GoutteDriver;
 
     $login = filter_input(INPUT_GET, "login", FILTER_SANITIZE_STRING);
     $password = filter_input(INPUT_GET, "password", FILTER_SANITIZE_STRING);
 
-    $c = curl_init();
+    $driver = new GoutteDriver();
+    $session = new Session($driver);
 
-    $post = array();
-    $post['Login'] = $login;
-    $post['Password'] = $password;
+    $session->start();
 
-    curl_setopt($c,CURLOPT_URL, "https://edu.brsc.ru/Logon/Index");
-    curl_setopt($c, CURLOPT_MAXREDIRS, 5);
-    curl_setopt($c, CURLOPT_POST, true);
-    curl_setopt($c, CURLOPT_POSTFIELDS, $post);
+    $session->visit("https://edu.brsc.ru/Logon/Index");
+    $btn = $session->getPage()->findButton("Войти");
 
-    curl_exec($c);
+    $login_et = $session->getPage()->findField("Login");
+    $password_et = $session->getPage()->findField("Password");
 
-    curl_setopt($c,CURLOPT_URL, "https://edu.brsc.ru/privateoffice");
-    curl_setopt($c, CURLOPT_MAXREDIRS, 5);
+    $login_et->setValue($login);
+    $password_et->setValue($password);
 
-    $wp = curl_exec($c);
+    $btn->press();
 
-    echo curl_getinfo($c, CURLINFO_HTTP_CODE);
-
-    echo $wp;
-
-    curl_close($c);
-
-
+    echo $session->getPage()->getHtml();
 
 function parseId($string)
 {
