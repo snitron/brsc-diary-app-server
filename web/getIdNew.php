@@ -26,6 +26,7 @@ use Behat\Mink\Driver\GoutteDriver;
     $btn->click();
     $btn->press();
 
+    $session->visit("https://edu.brsc.ru/privateoffice");
     echo $session->getPage()->getContent();
 
 function parseId($string)
