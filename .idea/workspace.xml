@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="2b9482ac-970a-4487-b0bd-e67c683ded41" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/getIdNew.php" beforeDir="false" afterPath="$PROJECT_DIR$/web/getIdNew.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -197,13 +198,13 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="php" value="930" />
+          <entry key="php" value="951" />
           <entry key="txt" value="8" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PHP" value="930" />
+          <entry key="PHP" value="951" />
           <entry key="PLAIN_TEXT" value="8" />
         </counts>
       </usages-collector>
@@ -251,8 +252,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/getIdNew.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="26" column="22" selection-start-line="26" selection-start-column="22" selection-end-line="26" selection-end-column="22" />
+            <state relative-caret-position="405">
+              <caret line="27" column="42" selection-start-line="27" selection-start-column="42" selection-end-line="27" selection-end-column="42" />
               <folding>
                 <element signature="e#52#70#0#PHP" expanded="true" />
               </folding>
@@ -479,14 +480,7 @@
       <workItem from="1541407730312" duration="607000" />
       <workItem from="1541451377520" duration="719000" />
       <workItem from="1541607634678" duration="8512000" />
-      <workItem from="1541696860434" duration="6351000" />
-    </task>
-    <task id="LOCAL-00065" summary="parseMain: addaed teachers comments and files hrefs">
-      <created>1541331900142</created>
-      <option name="number" value="00065" />
-      <option name="presentableId" value="LOCAL-00065" />
-      <option name="project" value="LOCAL" />
-      <updated>1541331900142</updated>
+      <workItem from="1541696860434" duration="6903000" />
     </task>
     <task id="LOCAL-00066" summary="parseMain: addaed teachers comments and files hrefs">
       <created>1541332102740</created>
@@ -824,14 +818,21 @@
       <option name="project" value="LOCAL" />
       <updated>1541703255280</updated>
     </task>
-    <option name="localTasksCounter" value="114" />
+    <task id="LOCAL-00114" summary="test">
+      <created>1541703901123</created>
+      <option name="number" value="00114" />
+      <option name="presentableId" value="LOCAL-00114" />
+      <option name="project" value="LOCAL" />
+      <updated>1541703901123</updated>
+    </task>
+    <option name="localTasksCounter" value="115" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="58115000" />
+    <option name="totallyTimeSpent" value="58667000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="25" width="1432" height="775" extended-state="1" />
+    <frame x="0" y="25" width="1432" height="775" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49905124" visible="true" weight="0.1315029" />
@@ -968,8 +969,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/getIdNew.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" column="22" selection-start-line="26" selection-start-column="22" selection-end-line="26" selection-end-column="22" />
+        <state relative-caret-position="405">
+          <caret line="27" column="42" selection-start-line="27" selection-start-column="42" selection-end-line="27" selection-end-column="42" />
           <folding>
             <element signature="e#52#70#0#PHP" expanded="true" />
           </folding>
