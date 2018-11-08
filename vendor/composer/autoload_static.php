@@ -32,11 +32,22 @@ class ComposerStaticInitdeecd950229a7e0d0890a19f3901cf77
         ),
     );
 
+    public static $prefixesPsr0 = array (
+        'C' => 
+        array (
+            'Curl' => 
+            array (
+                0 => __DIR__ . '/..' . '/lib/curl/lib',
+            ),
+        ),
+    );
+
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
             $loader->prefixLengthsPsr4 = ComposerStaticInitdeecd950229a7e0d0890a19f3901cf77::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInitdeecd950229a7e0d0890a19f3901cf77::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInitdeecd950229a7e0d0890a19f3901cf77::$prefixesPsr0;
 
         }, null, ClassLoader::class);
     }

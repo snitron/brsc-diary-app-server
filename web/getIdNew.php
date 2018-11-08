@@ -7,25 +7,31 @@ use \DiDom\Document;
     $login = filter_input(INPUT_GET, "login", FILTER_SANITIZE_STRING);
     $password = filter_input(INPUT_GET, "password", FILTER_SANITIZE_STRING);
 
-    $snoopy = new Snoopy();
+    $c = curl_init();
 
-    $post_array = array();
-    $post_array['Login'] = $login;
-    $post_array['Password'] = $password;
+    $post = array();
+    $post['Login'] = $login;
+    $post['Password'] = $password;
 
-    $snoopy->maxredirs = 4;
-    $snoopy->submit("https://edu.brsc.ru/Logon/Index", $post_array);
-    $snoopy->results;
+    curl_setopt($c,CURLOPT_URL, "https://edu.brsc.ru/Logon/Index");
+    curl_setopt($c, CURLOPT_MAXREDIRS, 5);
+    curl_setopt($c, CURLOPT_POST, true);
+    curl_setopt($c, CURLOPT_POSTFIELDS, $post);
 
-    $snoopy->maxredirs = 4;
-    $snoopy->submit("https://edu.brsc.ru/home/esiapromotion");
-    $snoopy->maxredirs = 4;
-// $snoopy->submit("https://edu.brsc.ru/User/Diary");
-    $snoopy->submit("https://edu.brsc.ru/privateoffice");
-    $html = new Document($snoopy->results);
+    curl_exec($c);
 
-    //echo parseId($html->find("a.h5")[0]->getAttribute("href"));
-    echo $html->html();
+    curl_setopt($c,CURLOPT_URL, "https://edu.brsc.ru/privateoffice");
+    curl_setopt($c, CURLOPT_MAXREDIRS, 5);
+
+    $wp = curl_exec($c);
+
+    echo curl_getinfo($c, CURLINFO_HTTP_CODE);
+
+    echo $wp;
+
+    curl_close($c);
+
+
 
 function parseId($string)
 {
