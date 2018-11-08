@@ -13,11 +13,11 @@ use \DiDom\Document;
     $post_array['Login'] = $login;
     $post_array['Password'] = $password;
 
-    $snoopy->maxredirs = 2;
+    $snoopy->maxredirs = 4;
     $snoopy->submit("https://edu.brsc.ru/Logon/Index", $post_array);
     $snoopy->results;
 
-    $snoopy->submit("https://edu.brsc.ru/User/Diary");
+   // $snoopy->submit("https://edu.brsc.ru/User/Diary");
  //   $snoopy->submit("https://edu.brsc.ru/privateoffice");
     $html = new Document($snoopy->results);
 
