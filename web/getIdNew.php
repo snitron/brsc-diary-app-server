@@ -17,7 +17,7 @@ use \DiDom\Document;
     $snoopy->submit("https://edu.brsc.ru/Logon/Index", $post_array);
     $snoopy->results;
 
-    //$snoopy->submit("https://edu.brsc.ru/User/Diary");
+    $snoopy->submit("https://edu.brsc.ru/privateoffice");
     $html = new Document($snoopy->results);
 
     //echo parseId($html->find("a.h5")[0]->getAttribute("href"));
