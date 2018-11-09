@@ -9,25 +9,29 @@ use Behat\Mink\Driver\GoutteDriver;
     $login = filter_input(INPUT_GET, "login", FILTER_SANITIZE_STRING);
     $password = filter_input(INPUT_GET, "password", FILTER_SANITIZE_STRING);
 
-    $driver = new GoutteDriver();
-    $session = new Session($driver);
+    $snoopy = new Snoopy();
 
-    $session->start();
+    $post_array = array();
+    $post_array['Login'] = $login;
+    $post_array['Password'] = $password;
 
-    $session->visit("https://edu.brsc.ru/Logon/Index");
-    $btn = $session->getPage()->findButton("Войти");
+    $snoopy->maxredirs = 2;
+    $snoopy->submit("https://edu.brsc.ru/Logon/Index", $post_array);
+    $snoopy->results;
 
-    $login_et = $session->getPage()->findField("Login");
-    $password_et = $session->getPage()->findField("Password");
+    $snoopy->submit("https://edu.brsc.ru/User/Diary");
+    $html = new Document($snoopy->results);
 
-    $login_et->setValue($login);
-    $password_et->setValue($password);
+    $id = parseId($html->find("a.h5")[0]->getAttribute("href"));
+    if($id == ""){
+        echo "";
+        session_register_shutdown();
+    }else{
+        echo $id;
+        session
+    }
 
-    $btn->click();
-    $btn->press();
 
-    $session->visit("https://edu.brsc.ru/privateoffice");
-    echo $session->getPage()->getContent();
 
 function parseId($string)
 {
