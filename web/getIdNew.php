@@ -9,7 +9,7 @@ use Behat\Mink\Driver\GoutteDriver;
     $login = filter_input(INPUT_GET, "login", FILTER_SANITIZE_STRING);
     $password = filter_input(INPUT_GET, "password", FILTER_SANITIZE_STRING);
 
-    $snoopy = new Snoopy();
+   /* $snoopy = new Snoopy();
 
     $post_array = array();
     $post_array['Login'] = $login;
@@ -22,13 +22,22 @@ use Behat\Mink\Driver\GoutteDriver;
     $snoopy->submit("https://edu.brsc.ru/User/Diary");
     $html = new Document($snoopy->results);
 
-    $id = parseId($html->find("a.h5")[0]->getAttribute("href"));
+    $id = parseId($html->find("a.h5")[0]->getAttribute("href"));*/
+
+    $id = 123456;
+    
     if($id == ""){
         echo "";
         session_register_shutdown();
     }else{
         echo $id;
 
+        $user = new User();
+        $user->login = $login;
+        $user->password = $password;
+        $user->child_ids = null;
+
+        $_SESSION[$id . ""] = json_encode($user);
     }
 
 
