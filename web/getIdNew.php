@@ -28,7 +28,7 @@ use Behat\Mink\Driver\GoutteDriver;
         session_register_shutdown();
     }else{
         echo $id;
-        session
+
     }
 
 
