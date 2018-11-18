@@ -20,7 +20,7 @@ class Table
 
 $headers = getallheaders();
 if ($headers['User-Agent'] == 'Nitron Apps BRSC Diary Http Connector') {
-
+    set_time_limit(120);
 
     $login = filter_input(INPUT_GET, "login", FILTER_SANITIZE_STRING);
     $password = filter_input(INPUT_GET, "password", FILTER_SANITIZE_STRING);

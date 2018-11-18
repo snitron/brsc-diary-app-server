@@ -6,28 +6,29 @@ use \DiDom\Document;
 use Behat\Mink\Session;
 use Behat\Mink\Driver\GoutteDriver;
 
-    $login = filter_input(INPUT_GET, "login", FILTER_SANITIZE_STRING);
-    $password = filter_input(INPUT_GET, "password", FILTER_SANITIZE_STRING);
+set_time_limit(120);
+$login = filter_input(INPUT_GET, "login", FILTER_SANITIZE_STRING);
+$password = filter_input(INPUT_GET, "password", FILTER_SANITIZE_STRING);
 
-    $driver = new GoutteDriver();
-    $session = new Session($driver);
+$driver = new GoutteDriver();
+$session = new Session($driver);
 
-    $session->start();
+$session->start();
 
-    $session->visit("https://edu.brsc.ru/Logon/Index");
-    $btn = $session->getPage()->findButton("Войти");
+$session->visit("https://edu.brsc.ru/Logon/Index");
+$btn = $session->getPage()->findButton("Войти");
 
-    $login_et = $session->getPage()->findField("Login");
-    $password_et = $session->getPage()->findField("Password");
+$login_et = $session->getPage()->findField("Login");
+$password_et = $session->getPage()->findField("Password");
 
-    $login_et->setValue($login);
-    $password_et->setValue($password);
+$login_et->setValue($login);
+$password_et->setValue($password);
 
-    $btn->click();
-    $btn->press();
+$btn->click();
+$btn->press();
 
-    $session->visit("https://edu.brsc.ru/privateoffice");
-    echo $session->getPage()->getContent();
+$session->visit("https://edu.brsc.ru/privateoffice");
+echo $session->getPage()->getContent();
 
 function parseId($string)
 {
