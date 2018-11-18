@@ -4,6 +4,7 @@ require __DIR__ . "/../vendor/autoload.php";
 use Snoopy\Snoopy;
 use \DiDom\Document;
 
+ini_set('max_input_time', 120);
 $headers = getallheaders();
 if ($headers['User-Agent'] == 'Nitron Apps BRSC Diary Http Connector') {
     set_time_limit(120);
