@@ -30,11 +30,12 @@ $headers = getallheaders();
         $check_login = $html->find("tr");
         if (count($check_login) != 0) {
             $check = $html->find("div.btn-group");
-            $child_ids = $html->find("ul.dropdown-menu")[1]->find("li");
+          
+         
+            if (count($check) != 0) {
+                  $child_ids = $html->find("ul.dropdown-menu")[1]->find("li");
 
             $user->child_ids[0] = parseId($html->find("a.h5")[0]->getAttribute("href"));
-
-            if (count($check) != 0) {
                 for ($i = 1; $i < count($child_ids) + 1; $i++)
                     $user->child_ids[$i] = parseId($child_ids[$i - 1]->find("a")[0]->getAttribute("href"));
 
