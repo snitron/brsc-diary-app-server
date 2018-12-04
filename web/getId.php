@@ -29,15 +29,11 @@ $headers = getallheaders();
 //}
 function parseId($string)
 {
-    echo $string;
     $b = stristr($string, "?");
-    echo "\n" . $b;
     $c = substr($b, 1);
-        echo "\n" . $c;
 
     $output = array();
     parse_str($c, $output);
 
-        echo "\n" . $output['UserId'];
     return $output['UserId'];
 }
