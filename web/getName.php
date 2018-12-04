@@ -53,7 +53,7 @@ $headers = getallheaders();
                 $person->child_ids[$i] = trim(parseName($html->find("tr")[0]->find("th")[0]->text()));
 
                 if($i == count($child_ids) - 1)
-                    $person->name = trim($html->find('a.navbar-link.d-none.d-md-flex')[0]->text());
+                    $person->name = trim($html->find('#UserFIO')[0]->text());
             }
 
             echo json_encode($person);
