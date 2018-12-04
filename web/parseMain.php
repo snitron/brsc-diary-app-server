@@ -106,7 +106,7 @@ if ($headers['User-Agent'] == 'Nitron Apps BRSC Diary Http Connector') {
         }
 
 
-        $day->dayName = strip_tags($daysNames[$i + 1]->text());
+        $day->dayName = $daysNames[$i + 1] != null ? strip_tags($daysNames[$i + 1]->text()) : "ERR";
         $days[$i] = $day;
     }
 
