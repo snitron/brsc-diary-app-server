@@ -53,7 +53,7 @@ if ($headers['User-Agent'] == 'Nitron Apps BRSC Diary Http Connector') {
                 $person->child_ids[$i] = trim(parseName($html->find("tr")[0]->find("th")[0]->text()));
 
                 if($i == count($child_ids) - 1)
-                    $person->name = trim($html->find("div.pull-right")[0]->find("h5")[0]->text());
+                    $person->name = trim($html->find("a[id=UserFIO]")[0]->text());
             }
 
             echo json_encode($person);
