@@ -33,7 +33,7 @@ $headers = getallheaders();
           
          
             if (count($check) != 0) {
-                  $child_ids = $html->find("ul.dropdown-menu")[1]->find("li");
+                  $child_ids = $html->find("ul.dropdown-menu")[0]->find("li");
 
             $user->child_ids[0] = parseId($html->find("a.h5")[0]->getAttribute("href"));
                 for ($i = 1; $i < count($child_ids) + 1; $i++)
