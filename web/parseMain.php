@@ -22,11 +22,8 @@ class DaySheldule
     );
 }
 
-ini_set('max_input_time', 120);
 $headers = getallheaders();
 if ($headers['User-Agent'] == 'Nitron Apps BRSC Diary Http Connector') {
-    set_time_limit(120);
-
     $action = filter_input(INPUT_GET, "action", FILTER_SANITIZE_STRING);
 
     $login = filter_input(INPUT_GET, 'login', FILTER_SANITIZE_STRING);
