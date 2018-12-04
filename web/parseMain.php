@@ -48,7 +48,7 @@ if ($headers['User-Agent'] == 'Nitron Apps BRSC Diary Http Connector') {
     $elements = $html->find("table");
     $days = array();
 
-    $daysNames = $html->find("div > h3");
+    $daysNames = $html->find("h3");
 
     for ($i = 0; $i < count($elements); $i++) {
         $day = new DaySheldule();
