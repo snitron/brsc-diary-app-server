@@ -29,7 +29,7 @@ $headers = getallheaders();
         $user = new User();
         $check_login = $html->find("tr");
         if (count($check_login) != 0) {
-            $check = $html->find("span.btn-group");
+            $check = $html->find("span.dropdown.show");
           
          
             if (count($check) != 0) {
