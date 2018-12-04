@@ -29,6 +29,7 @@ if ($headers['User-Agent'] == 'Nitron Apps BRSC Diary Http Connector') {
 }
 function parseId($string)
 {
+    echo $string;
     $b = stristr($string, "?");
     $c = substr($b, 1);
 
