@@ -14,7 +14,7 @@ $session = new \Behat\Mink\Session($driver);
 
 $session->start();
 $session->visit("https://edu.brsc.ru/Logon/Index");
-$btn = $session->getPage()->findButton("btn.btn-secondary.btn-lg");
+$btn = $session->getPage()->findButton("Войти");
 $loginEdit = $session->getPage()->findField("Login");
 $loginEdit->setValue($login);
 
