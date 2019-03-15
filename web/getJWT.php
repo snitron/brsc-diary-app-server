@@ -21,6 +21,9 @@ for($i = 0; $i < count($snoopy->headers); $i++){
 for($i = 0; $i < count($snoopy->cookies); $i++){
     echo $snoopy->cookies[$i];
 }
+for($i = 0; $i < count($snoopy->rawheaders); $i++){
+    echo $snoopy->rawheaders[$i];
+}
 
 echo $snoopy->results;
 
