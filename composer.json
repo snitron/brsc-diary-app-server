@@ -3,6 +3,8 @@
 		"php":">=7.1.0",
 		"pherum/snoopy": "2.0",
 		"imangazaliev/didom": "1.13",
-		"ralouphie/getallheaders": "2.0.5"
+		"ralouphie/getallheaders": "2.0.5",
+		"behat/mink" : "1.7.1",
+		"behat/mink-goutte-driver" : "1.2.1"
     }
 }
