@@ -7,6 +7,29 @@ $login = filter_input(INPUT_GET, "login", FILTER_SANITIZE_STRING);
 $password = filter_input(INPUT_GET, "password", FILTER_SANITIZE_STRING);
 $version = filter_input(INPUT_GET, "version", FILTER_SANITIZE_STRING);
 
+
+$driver = new \Behat\Mink\Driver\GoutteDriver();
+
+$session = new \Behat\Mink\Session($driver);
+
+$session->start();
+$session->visit("https://edu.brsc.ru/Logon/Index");
+$btn = $session->getPage()->findButton("btn.btn-secondary.btn-lg");
+$loginEdit = $session->getPage()->findField("Login");
+$loginEdit->setValue($login);
+
+$passwordEdit = $session->getPage()->findField("Password");
+$passwordEdit->setValue($password);
+
+$btn->click();
+echo $session->getCurrentUrl();
+
+for($i = 0; $i < count($session->getResponseHeaders()); $i++){
+    echo $session->getResponseHeaders()[$i];
+}
+
+echo $session->getCookie("JWToken");
+/*
 $snoopy = new Snoopy();
 $post_array = array();
 $post_array['Login'] = $login;
@@ -24,8 +47,9 @@ for($i = 0; $i < count($snoopy->cookies); $i++){
 for($i = 0; $i < count($snoopy->rawheaders); $i++){
     echo $snoopy->rawheaders[$i];
 }
+curl
 
 echo $snoopy->results;
-
+*/
 
 
