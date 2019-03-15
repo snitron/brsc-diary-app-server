@@ -21,5 +21,7 @@ for($i = 0; $i < count($snoopy->cookies); $i++){
     echo $snoopy->cookies[$i];
 }
 
+echo $snoopy->results;
+
 
 
