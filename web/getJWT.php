@@ -17,6 +17,9 @@ $snoopy->submit("https://edu.brsc.ru/Logon/Index", $post_array);
 for($i = 0; $i < count($snoopy->headers); $i++){
     echo $snoopy->headers[$i];
 }
+for($i = 0; $i < count($snoopy->cookies); $i++){
+    echo $snoopy->cookies[$i];
+}
 
 
 
