@@ -13,6 +13,7 @@ $post_array['Login'] = $login;
 $post_array['Password'] = $password;
 $snoopy->maxredirs = 2;
 $snoopy->submit("https://edu.brsc.ru/Logon/Index", $post_array);
+$snoopy->passcookies = true;
 //$snoopy->submit("https://edu.brsc.ru/User/Diary");
 for($i = 0; $i < count($snoopy->headers); $i++){
     echo $snoopy->headers[$i];
