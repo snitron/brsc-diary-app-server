@@ -30,7 +30,7 @@ for($i = 0; $i < count($session->getResponseHeaders()); $i++){
 
 echo $session->getCookie("JWToken");
 $session->setCookie("Token","0");
-$session->visit("https://edu.brsc.ru/User/Diary");
+$session->visit("https://edu.brsc.ru/privateoffice");
 
 echo $session->getPage()->getHtml();
 
