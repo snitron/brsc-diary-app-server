@@ -2,7 +2,7 @@
 require __DIR__ . "/../vendor/autoload.php";
 
 use Snoopy\Snoopy;
-
+use DiDom;
 $login = filter_input(INPUT_GET, "login", FILTER_SANITIZE_STRING);
 $password = filter_input(INPUT_GET, "password", FILTER_SANITIZE_STRING);
 $version = filter_input(INPUT_GET, "version", FILTER_SANITIZE_STRING);
@@ -31,8 +31,9 @@ for($i = 0; $i < count($session->getResponseHeaders()); $i++){
 echo $session->getCookie("JWToken");
 $session->setCookie("Token","0");
 $session->visit("https://edu.brsc.ru/privateoffice");
+$parser = new DiDom\Document($session->getPage()->getHtml());
 
-echo $session->getPage()->getHtml();
+echo $parser->find("col-lg-7.col-md-8.col-sm-8.col-6")[0];
 
 /*
 $snoopy = new Snoopy();
