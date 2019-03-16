@@ -29,7 +29,7 @@ $headers = getallheaders();
         //  session_start();
 
         $user = new User();
-        $check_login = $html->find('a.btn.btn-sm.btn-primary[value="Дневник"]');
+        $check_login = $html->find('a[role="button"]');
         if (count($check_login) != 0) {
 
             for ($i = 0; $i < count($check_login); $i++)
