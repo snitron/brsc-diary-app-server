@@ -32,7 +32,7 @@ $headers = getallheaders();
         $html = new Document($session->getPage()->getHtml());
 
         $user = new User();
-        $check_login = $html->find("a.btn.btn-sm.btn-primary[=Дневник]");
+        $check_login = $html->find("a.btn.btn-sm.btn-primary[Дневник]");
         if (count($check_login) != 0) {
 
             for ($i = 0; $i < count($check_login); $i++)
@@ -65,6 +65,3 @@ function parseId($string)
 
     return $output['UserId'];
 }
-
-
-
