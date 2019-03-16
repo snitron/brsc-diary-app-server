@@ -33,7 +33,7 @@ $session->setCookie("Token","0");
 $session->visit("https://edu.brsc.ru/privateoffice");
 $parser = new DiDom\Document($session->getPage()->getHtml());
 
-echo $parser->find("col-lg-7.col-md-8.col-sm-8.col-6")[0]->text();
+echo $parser->find("p.col-lg-7.col-md-8.col-sm-8.col-6")[0]->text();
 
 /*
 $snoopy = new Snoopy();
