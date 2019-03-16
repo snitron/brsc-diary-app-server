@@ -29,6 +29,11 @@ for($i = 0; $i < count($session->getResponseHeaders()); $i++){
 }
 
 echo $session->getCookie("JWToken");
+$session->setCookie("Token","0");
+$session->visit("https://edu.brsc.ru/User/Diary");
+
+echo $session->getPage()->getHtml();
+
 /*
 $snoopy = new Snoopy();
 $post_array = array();
