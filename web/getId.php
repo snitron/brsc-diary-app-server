@@ -24,16 +24,12 @@ $headers = getallheaders();
     $btn->click();
     $session->visit("https://edu.brsc.ru/privateoffice");
     $html = new Document($session->getPage()->getHtml());
-    echo $html->html();
 
     if ($version != null) { //for eldery version support. delete in the future
         //  session_start();
 
-
-        $html = new Document($session->getPage()->getHtml());
-
         $user = new User();
-        $check_login = $html->find("a.btn.btn-sm.btn-primary[Дневник]");
+        $check_login = $html->find("a.btn.btn-sm.btn-primary[value=Дневник]");
         if (count($check_login) != 0) {
 
             for ($i = 0; $i < count($check_login); $i++)
