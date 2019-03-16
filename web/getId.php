@@ -24,7 +24,7 @@ $headers = getallheaders();
     $btn->click();
     $session->visit("https://edu.brsc.ru/privateoffice");
     $html = new Document($session->getPage()->getHtml());
-
+    echo $html->html();
     if ($version != null) { //for eldery version support. delete in the future
         //  session_start();
 
