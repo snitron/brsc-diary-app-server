@@ -43,7 +43,7 @@ if ($version != null) {
             $person->child_ids = null;
             $userID = filter_input(INPUT_GET, "child_ids", FILTER_SANITIZE_STRING);
 
-            $person->name = trim(parseName($html->find("h1.text-center")[0]->text()));
+            $person->name = trim($html->find("h1.text-center")[0]->text());
 
            echo json_encode($person);
         } else {
@@ -54,7 +54,7 @@ if ($version != null) {
                 $person->child_ids[$i] = $child_names[$i]->find("a")[0]->text();
             }
 
-            $person->name = trim(parseName($html->find("h1.text-center")[0]->text()));
+            $person->name = trim($html->find("h1.text-center")[0]->text());
             /*
             for ($i = 0; $i < count($child_ids); $i++) {
                 $snoopy->submit("https://edu.brsc.ru/user/diary/diaryresult?UserId=" . $child_ids[$i]);
@@ -71,7 +71,7 @@ if ($version != null) {
     } else {
         $userID = filter_input(INPUT_GET, "userID", FILTER_SANITIZE_STRING);
         $result = new PersonOld();
-        $result->name =  trim(parseName($html->find("h1.text-center")[0]->text()));
+        $result->name =  trim($html->find("h1.text-center")[0]->text());
         $result->img = $html->find('img.media-object.rounded-circle')[0]->getAttribute("src");
         echo json_encode($result);
     }
