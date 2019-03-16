@@ -16,8 +16,9 @@ $session = new \Behat\Mink\Session($driver);
 
 $session->start();
 $session->visit("https://edu.brsc.ru/Logon/Index");
-$session->setCookie("JWToken", "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJZCI6IjQ5NDEyOSIsInJvbGUiOiI4LERlcGFydG1lbnQsLDUyLDQ3OSw2MjI4NywiLCJuYmYiOjE1NTI2NzY0MDAsImV4cCI6MTU1MzI4MTIwMCwiaWF0IjoxNTUyNzM1MTYyLCJpc3MiOiIxMC4zLjIuMzAiLCJhdWQiOiJpdC5icnNjLnJ1In0.42ovgYR9hVKhNqvTFk9oNSwwhStbXvi3dWEElMZtJSI");
-$session->setRequestHeader("Authorization", "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJZCI6IjQ5NDEyOSIsInJvbGUiOiI4LERlcGFydG1lbnQsLDUyLDQ3OSw2MjI4NywiLCJuYmYiOjE1NTI2NzY0MDAsImV4cCI6MTU1MzI4MTIwMCwiaWF0IjoxNTUyNzM1MTYyLCJpc3MiOiIxMC4zLjIuMzAiLCJhdWQiOiJpdC5icnNjLnJ1In0.42ovgYR9hVKhNqvTFk9oNSwwhStbXvi3dWEElMZtJSI");
+$session->setCookie("JWToken", "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJZCI6IjQ5NDEyOSIsInJvbGUiOiI4LERlcGFydG1lbnQsLDUyLDQ3OSw2MjI4NywiLCJuYmYiOjE1NTI2NzY0MDAsImV4cCI6MTU1MzI4MTIwMCwiaWF0IjoxNTUyNzQ0MTMzLCJpc3MiOiIxMC4zLjIuMjYiLCJhdWQiOiJpdC5icnNjLnJ1In0.XsiW_Ij8ZrGnw2F7ctkrtqwWPzJBpsjHdniuXlgNQdk");
+$session->setRequestHeader("Authorization", "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJZCI6IjQ5NDEyOSIsInJvbGUiOiI4LERlcGFydG1lbnQsLDUyLDQ3OSw2MjI4NywiLCJuYmYiOjE1NTI2NzY0MDAsImV4cCI6MTU1MzI4MTIwMCwiaWF0IjoxNTUyNzQ0MTMzLCJpc3MiOiIxMC4zLjIuMjYiLCJhdWQiOiJpdC5icnNjLnJ1In0.XsiW_Ij8ZrGnw2F7ctkrtqwWPzJBpsjHdniuXlgNQdk");
+
 $session->visit("https://edu.brsc.ru/User/Diary");
 
 echo $session->getPage()->getHtml();
