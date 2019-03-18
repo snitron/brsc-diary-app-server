@@ -5,6 +5,8 @@
 		"imangazaliev/didom": "1.13",
 		"ralouphie/getallheaders": "2.0.5",
 		"behat/mink" : "1.7.1",
-		"behat/mink-goutte-driver" : "1.2.1"
+		"behat/mink-goutte-driver" : "1.2.1",
+		"behat/mink-sahi-driver" : "1.2.1",
+		"behat/sahi-client" : "1.2.1"
     }
 }
