@@ -11,8 +11,8 @@ $headers = getallheaders();
     $password = filter_input(INPUT_GET, "password", FILTER_SANITIZE_STRING);
     $version = filter_input(INPUT_GET, "version", FILTER_SANITIZE_STRING);
 
-   // $driver = new \Behat\Mink\Driver\GoutteDriver();
-    $driver = new \Behat\Mink\Driver\SahiDriver('firefox');
+   $driver = new \Behat\Mink\Driver\GoutteDriver();
+    //$driver = new \Behat\Mink\Driver\SahiDriver('firefox');
     $session = new \Behat\Mink\Session($driver);
 
     $session->start();
