@@ -15,11 +15,11 @@ $headers = getallheaders();
     $session = new \Behat\Mink\Session($driver);
 
     $session->start();
-    $session->visit("https://edu.brsc.ru/Logon/Index");
-    $btn = $session->getPage()->findButton("Войти");
-    $loginEdit = $session->getPage()->findField("Login");
+    $session->visit("https://elschool.ru/Logon/Index");
+    $btn = $session->getPage()->findButton("sub-btn");
+    $loginEdit = $session->getPage()->findField("login");
     $loginEdit->setValue($login);
-    $passwordEdit = $session->getPage()->findField("Password");
+    $passwordEdit = $session->getPage()->findField("password");
     $passwordEdit->setValue($password);
     $btn->click();
     $session->visit("https://edu.brsc.ru/privateoffice");
