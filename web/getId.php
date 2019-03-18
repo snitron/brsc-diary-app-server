@@ -16,7 +16,7 @@ $headers = getallheaders();
 
     $session->start();
     $session->visit("https://elschool.ru/Logon/Index");
-    $btn = $session->getPage()->findButton("sub-btn");
+    $btn = $session->getPage()->findButton("Войти");
     $loginEdit = $session->getPage()->findField("login");
     $loginEdit->setValue($login);
     $passwordEdit = $session->getPage()->findField("password");
