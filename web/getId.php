@@ -22,7 +22,7 @@ $headers = getallheaders();
     $loginEdit->setValue($login);
     $passwordEdit = $session->getPage()->findField("password");
     $passwordEdit->setValue($password);
-    $btn->click();
+    $btn->press();
     $session->visit("https://edu.brsc.ru/privateoffice");
     $html = new Document($session->getPage()->getHtml());
     
